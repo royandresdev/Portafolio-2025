@@ -1,14 +1,17 @@
 import AvatarSrc from "../assets/Avatar.jpg"
 import GithubIcon from "../assets/githubIcon.svg";
 import LinkedinIcon from "../assets/linkedinIcon.svg"
+import { Frame } from '../components'
 
 const About = () => {
   return (
     <section className="bg-primary-700">
       <div className="container mx-auto h-dvh flex items-center gap-6 justify-center">
-        <div className="size-[500px] overflow-hidden">
-          <img className="w-full" src={AvatarSrc} alt="Foto de Roy Huaman" />
-        </div>
+        <Frame>
+          <div className="size-[500px] overflow-hidden">
+            <img className="w-full" src={AvatarSrc} alt="Foto de Roy Huaman" />
+          </div>
+        </Frame>
         <div className="flex-1/2 max-w-[500px]">
           <p className="text-grey- tracking-widest mb-6">- MI NOMBRE ES</p>
           <h1 className="leading-14 mb-6">
