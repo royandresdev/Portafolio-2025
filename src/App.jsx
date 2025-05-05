@@ -1,9 +1,10 @@
 import './App.css'
+import { About } from './sections'
 
 function App() {
   return (
     <main>
-      <h1 className='bg-secondary-100'>Portafolio 2025</h1>
+      <About />
     </main>
   )
 }
