@@ -1,11 +1,12 @@
 import './App.css'
-import { About, Projects } from './sections'
+import { About, Experience, Projects } from './sections'
 
 function App() {
   return (
     <main>
       <About />
       <Projects />
+      <Experience />
     </main>
   )
 }
