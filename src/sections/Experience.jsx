@@ -4,9 +4,9 @@ import MakeItRealIcon from "../assets/makeItRealLogo.png"
 const Experience = () => {
   return (
     <section className="h-dvh bg-primary-700">
-      <div className="container m-auto">
+      <div className="container m-auto pt-12 h-full flex flex-col">
         <h2 className="text-secondary-base mb-6">Experiencia</h2>
-        <div className="flex gap-12 items-center">
+        <div className="flex gap-12 items-center flex-1 pb-12">
           <img src={tuVideoImg} alt="TuVideo presentation image" />
           <div>
             <div className="flex items-center gap-4 mb-2">
