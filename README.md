@@ -35,6 +35,8 @@ Usé [TailwindCSS](https://tailwindcss.com/) porque:
 ```
 src/
 ├── assets/             # Archivos estáticos
+├── components/         # Componentes de la página
+├── sections/           # Secciones de la página principal
 ├── App.jsx             # Componente principal
 ├── main.jsx            # Entrada principal
 ```
@@ -78,7 +80,7 @@ npm run test
 **Roy Huaman**  
 📫 [contact@royandresdev.com](mailto:contact@royandresdev.com)  
 🔗 [LinkedIn](https://www.linkedin.com/in/royhuamanavila/)  
-💻 🚧 Aun en construcción 🚧
+💻 🚧 Aun en construcción 🚧 <br/>
 🐈‍⬛ [GitHub](https://github.com/royandresdev)
 
 ---
