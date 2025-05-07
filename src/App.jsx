@@ -1,5 +1,5 @@
 import './App.css'
-import { About, Experience, Projects } from './sections'
+import { About, Experience, Projects, Skills } from './sections'
 
 function App() {
   return (
@@ -7,6 +7,7 @@ function App() {
       <About />
       <Projects />
       <Experience />
+      <Skills />
     </main>
   )
 }
