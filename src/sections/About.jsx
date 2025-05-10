@@ -1,6 +1,5 @@
+import { Icon } from "@iconify/react/dist/iconify.js";
 import AvatarSrc from "../assets/Avatar.jpg"
-import GithubIcon from "../assets/githubIcon.svg";
-import LinkedinIcon from "../assets/linkedinIcon.svg"
 import { Frame } from '../components'
 
 const About = () => {
@@ -25,8 +24,12 @@ const About = () => {
             Me encanta mostrar los resultados a los usuarios, lo que me apasiona de esta área. Estoy comprometido con sacar adelante mis proyectos y que estos sean reconocidos.
           </p>
           <div className="flex gap-4">
-            <img src={GithubIcon} alt="GitHub Icon" />
-            <img src={LinkedinIcon} alt="LinkedIn Icon" />
+            <a href="#">
+              <Icon icon="mdi:github" className="text-4xl text-primary-100" />
+            </a>
+            <a href="#">
+              <Icon icon="mdi:linkedin" className="text-4xl text-primary-100" />
+            </a>
           </div>
         </div>
       </div>
