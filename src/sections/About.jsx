@@ -1,7 +1,5 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import AvatarSrc from "../assets/Avatar.jpg"
-import GithubIcon from "../assets/githubIcon.svg";
-import LinkedinIcon from "../assets/linkedinIcon.svg"
 import { Frame } from '../components'
 
 const About = () => {
