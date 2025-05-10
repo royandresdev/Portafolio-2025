@@ -1,3 +1,4 @@
+import { projects } from "../constants"
 import { ProjectCard } from "../components"
 
 const Projects = () => {
@@ -7,7 +8,9 @@ const Projects = () => {
         <h2 className="text-secondary-base">Proyectos Recientes</h2>
         <p className="mb-8">En esta sección puedes ver algunos de los proyectos que he realizado o en los que estoy trabajando actualmente.</p>
         <div>
-          <ProjectCard />
+          {
+            projects.map((project) => <ProjectCard	{...project} />)
+          }
         </div>
       </div>
     </section>
