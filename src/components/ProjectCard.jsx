@@ -1,3 +1,4 @@
+import { InlineIcon } from "@iconify/react/dist/iconify.js"
 import Frame from "./Frame"
 
 const ProjectCard = ({ image, name, technologies, description, linkDemo, linkRepo, linkFigma }) => {
@@ -16,9 +17,15 @@ const ProjectCard = ({ image, name, technologies, description, linkDemo, linkRep
         {description}
       </p>
       <div className="space-x-2">
-        <a href={linkDemo} target="_blank" className="text-secondary-base px-2 py-1 border border-secondary-base rounded">Demo</a>
-        <a href={linkRepo} target="_blank" className="text-secondary-base px-2 py-1 border border-secondary-base rounded">Repositorio</a>
-        <a href={linkFigma} target="_blank" className="text-secondary-base px-2 py-1 border border-secondary-base rounded">Figma</a>
+        <a href={linkDemo} target="_blank" className="text-secondary-base px-2 py-1 border border-secondary-base rounded">
+          <InlineIcon icon="material-symbols:monitor" className="inline" /> Demo
+        </a>
+        <a href={linkRepo} target="_blank" className="text-secondary-base px-2 py-1 border border-secondary-base rounded">
+          <InlineIcon icon="mdi:github" className="inline text-lg" /> Repositorio
+        </a>
+        <a href={linkFigma} target="_blank" className="text-secondary-base px-2 py-1 border border-secondary-base rounded">
+          <InlineIcon icon="logos:figma" className="inline" /> Figma
+        </a>
       </div>
     </Frame>
   )
