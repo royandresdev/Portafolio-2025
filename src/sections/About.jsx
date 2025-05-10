@@ -23,7 +23,7 @@ const About = () => {
           <p className="mb-6">
             Me encanta mostrar los resultados a los usuarios, lo que me apasiona de esta área. Estoy comprometido con sacar adelante mis proyectos y que estos sean reconocidos.
           </p>
-          <div className="flex gap-4">
+          <div className="flex gap-3">
             <a href="#">
               <Icon icon="mdi:github" className="text-4xl text-primary-100" />
             </a>
