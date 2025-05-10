@@ -8,7 +8,8 @@
   h5,
   h6,
   p,
-  span, label {
+  span,
+  label {
     color: var(--color-grey-100);
   }
   h1 {
@@ -62,4 +63,9 @@
   --color-grey-500: #595253;
   --color-grey-600: #373233;
   --color-grey-700: #181515;
+}
+
+@utility section-tittle {
+  @apply text-primary-100 mb-6 text-base block;
+  letter-spacing: 0.2rem;
 }

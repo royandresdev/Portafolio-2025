@@ -12,7 +12,7 @@ const About = () => {
           </div>
         </Frame>
         <div className="flex-1/2 max-w-[500px]">
-          <p className="text-grey- tracking-widest mb-6">- MI NOMBRE ES</p>
+          <span className="section-tittle">- MI NOMBRE ES</span>
           <h1 className="leading-14 mb-6">
             <span className="text-secondary-base block">Roy Huaman</span>
             Frontend Developer

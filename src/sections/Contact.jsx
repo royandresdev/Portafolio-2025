@@ -4,6 +4,7 @@ const Contact = () => {
   return (
     <section className="h-dvh bg-primary-700">
       <div className="container mx-auto">
+        <span className="section-tittle">- DÉJAME UN MENSAJE</span>
         <h2 className="text-secondary-base">Contacto</h2>
         <p className="mb-6">Gracias por visitar mi portafolio web. Espero que te haya gustado lo que has visto. Aquí puedes encontrar mis datos de contacto.</p>
         <div className="flex items-start w-full gap-12">

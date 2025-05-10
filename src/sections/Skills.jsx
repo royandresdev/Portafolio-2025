@@ -13,6 +13,7 @@ const Skills = () => {
   return (
     <section className="h-dvh bg-primary-700 flex">
       <div className="container m-auto flex flex-col justify-center">
+        <span className="section-tittle">- MI APRENDIZAJE</span>
         <h2 className="text-secondary-base mb-4">Educación y Habilidades</h2>
         <div className="flex justify-between">
           <div>
