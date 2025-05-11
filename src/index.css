@@ -69,3 +69,11 @@
   @apply text-primary-100 mb-6 text-base block;
   letter-spacing: 0.2rem;
 }
+
+@utility section-container {
+  @apply h-dvh flex justify-center items-center;
+}
+
+@utility section-content {
+  @apply container mx-auto;
+}

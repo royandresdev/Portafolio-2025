@@ -4,8 +4,8 @@ import { Frame } from '../components'
 
 const About = () => {
   return (
-    <section className="bg-primary-700">
-      <div className="container mx-auto h-dvh flex items-center gap-6 justify-center">
+    <section className="section-container bg-primary-700">
+      <div className="section-content flex gap-6 justify-center">
         <Frame>
           <div className="size-[500px] overflow-hidden">
             <img className="w-full" src={AvatarSrc} alt="Foto de Roy Huaman" />

@@ -3,8 +3,8 @@ import MakeItRealIcon from "../assets/makeItRealLogo.png"
 
 const Experience = () => {
   return (
-    <section className="h-dvh bg-primary-700">
-      <div className="container m-auto pt-12 h-full flex flex-col">
+    <section className="section-container bg-primary-700">
+      <div className="section-content">
         <span className="section-tittle">- RUTA DE CARRERA</span>
         <h2 className="text-secondary-base mb-6">Experiencia</h2>
         <div className="flex gap-12 items-center flex-1 pb-12">
