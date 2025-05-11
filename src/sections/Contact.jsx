@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react"
 
 const Contact = () => {
   return (
-    <section className="section-container bg-primary-700">
+    <section id="contact" className="section-container bg-primary-700">
       <div className="section-content">
         <span className="section-tittle">- DÉJAME UN MENSAJE</span>
         <h2 className="text-secondary-base">Contacto</h2>

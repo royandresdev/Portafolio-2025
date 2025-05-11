@@ -4,7 +4,7 @@ import { Frame } from '../components'
 
 const About = () => {
   return (
-    <section className="section-container bg-primary-700">
+    <section id="about" className="section-container bg-primary-700">
       <div className="section-content flex gap-6 justify-center">
         <Frame>
           <div className="size-[500px] overflow-hidden">

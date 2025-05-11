@@ -3,7 +3,7 @@ import MakeItRealIcon from "../assets/makeItRealLogo.png"
 
 const Experience = () => {
   return (
-    <section className="section-container bg-primary-700">
+    <section id="experience" className="section-container bg-primary-700">
       <div className="section-content">
         <span className="section-tittle">- RUTA DE CARRERA</span>
         <h2 className="text-secondary-base mb-6">Experiencia</h2>
