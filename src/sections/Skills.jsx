@@ -1,12 +1,7 @@
 import { Frame } from "../components"
-import reactLogo from "../assets/reactLogo.svg"
-import tailwindLogo from "../assets/tailwindLogo.svg"
-import reduxLogo from "../assets/reduxLogo.svg"
-import javascriptLogo from "../assets/javascriptLogo.svg"
-import htmlLogo from "../assets/htmlLogo.svg"
-import cssLogo from "../assets/cssLogo.svg"
 import certificate from "../assets/certificate.svg"
 import universityGrade from "../assets/universityGrade.svg"
+import { Icon } from "@iconify/react/dist/iconify.js"
 
 
 const Skills = () => {
@@ -38,27 +33,27 @@ const Skills = () => {
             <p className="mb-4">En esta sección puedes ver las tecnologías que domino como desarrollador frontend. Estas son las que uso para diseñar aplicaciones y páginas web:</p>
             <Frame className="flex gap-4 py-4 items-center bg-primary-base">
               <div className="px-4">
-                <img className="h-[72px] w-auto" src={reactLogo} alt="React Logo" />
+                <Icon icon="mdi:react" className="text-7xl text-secondary-100" />
                 <p className="text-center">React</p>
               </div>
               <div className="px-4">
-                <img className="h-[72px] w-auto" src={tailwindLogo} alt="Tailwind CSS Logo" />
+                <Icon icon="mdi:tailwind" className="text-7xl text-secondary-100" />
                 <p className="text-center">Tailwind</p>
               </div>
               <div className="px-4">
-                <img className="h-[72px] w-auto" src={reduxLogo} alt="Redux Logo" />
+                <Icon icon="akar-icons:redux-fill" className="text-7xl text-secondary-100" />
                 <p className="text-center">Redux</p>
               </div>
               <div className="px-4">
-                <img className="h-[72px] w-auto" src={javascriptLogo} alt="JavaScript Logo" />
+                <Icon icon="akar-icons:javascript-fill" className="text-7xl text-secondary-100" />
                 <p className="text-center">JavaScript</p>
               </div>
               <div className="px-4">
-                <img className="h-[72px] w-auto" src={htmlLogo} alt="HTML Logo" />
+                <Icon icon="akar-icons:html-fill" className="text-7xl text-secondary-100" />
                 <p className="text-center">HTML</p>
               </div>
               <div className="px-4">
-                <img className="h-[72px] w-auto" src={cssLogo} alt="CSS Logo" />
+                <Icon icon="simple-icons:css" className="text-7xl text-secondary-100" />
                 <p className="text-center">CSS</p>
               </div>
             </Frame>
