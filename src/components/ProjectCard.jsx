@@ -4,10 +4,10 @@ import Frame from "./Frame"
 const ProjectCard = ({ image, name, technologies, description, linkDemo, linkRepo, linkFigma }) => {
   return (
     <Frame className="bg-primary-600 px-8 pt-4 pb-8">
-      <div>
+      <div className="mb-2">
         <img className="max-w-[342px]" src={image} alt="Project Image" />
       </div>
-      <h3>{name}</h3>
+      <h4 className="mb-2">{name}</h4>
       <div className="space-x-2 mb-4">
         {
           technologies.map((tech) => <span className="bg-primary-500 px-1 py-0.5 rounded text-secondary-base">{tech}</span>)
