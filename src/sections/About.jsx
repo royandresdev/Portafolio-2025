@@ -25,10 +25,10 @@ const About = () => {
           </p>
           <div className="flex gap-3">
             <a href="#">
-              <Icon icon="mdi:github" className="text-4xl text-primary-100" />
+              <Icon icon="mdi:github" className="text-4xl text-primary-100 hover:text-secondary-base" />
             </a>
             <a href="#">
-              <Icon icon="mdi:linkedin" className="text-4xl text-primary-100" />
+              <Icon icon="mdi:linkedin" className="text-4xl text-primary-100 hover:text-secondary-base" />
             </a>
           </div>
         </div>
