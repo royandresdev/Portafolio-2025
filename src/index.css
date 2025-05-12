@@ -37,6 +37,16 @@
   small {
     font-size: 0.833rem;
   }
+
+  a {
+    color: var(--color-primary-100);
+    transition: all 0.25s;
+  }
+
+  a.active {
+    color: var(--color-secondary-base);
+    transition: all 0.25s;
+  }
 }
 
 @theme {
