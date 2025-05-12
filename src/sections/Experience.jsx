@@ -1,4 +1,3 @@
-import tuVideoImg from "../assets/tu-video-1.png"
 import MakeItRealIcon from "../assets/makeItRealLogo.png"
 
 const Experience = () => {
@@ -8,7 +7,9 @@ const Experience = () => {
         <span className="section-tittle">- RUTA DE CARRERA</span>
         <h2 className="text-secondary-base mb-6">Experiencia</h2>
         <div className="flex gap-12 items-center flex-1 pb-12">
-          <img src={tuVideoImg} alt="TuVideo presentation image" />
+          <div className="w-[650px]">
+            <iframe width={650} height={365} src="https://www.youtube.com/embed/-SJfrF_vJ3A?si=TTO7f-YBR8tPcwUh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
           <div>
             <div className="flex items-center gap-4 mb-2">
               <img src={MakeItRealIcon} alt="Make It Real Logo" />
