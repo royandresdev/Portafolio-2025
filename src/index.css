@@ -80,3 +80,13 @@
 @utility section-content {
   @apply container mx-auto;
 }
+
+@utility btn-secondary-outline {
+  @apply text-secondary-base px-2 py-1 border border-secondary-base rounded font-medium;
+  transition: all 0.25s;
+
+  &:hover {
+    @apply bg-secondary-base text-primary-700 font-medium;
+    transition: all 0.25s;
+  }
+}
