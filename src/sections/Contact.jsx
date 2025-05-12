@@ -21,7 +21,7 @@ const Contact = () => {
               <label className="block mb-2" htmlFor="message">Mensaje</label>
               <textarea rows={6} className="block bg-primary-600 border border-primary-300 rounded w-full" type="text" id="message" />
             </div>
-            <input className="py-3 rounded bg-secondary-base text-primary-base font-bold w-full" type="submit" value="Enviar Mensaje" />
+            <input className="btn-secondary w-full" type="submit" value="Enviar Mensaje" />
           </form>
           <div className="space-y-8">
             <div className="flex gap-4 items-center">
