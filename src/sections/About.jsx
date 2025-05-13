@@ -24,10 +24,10 @@ const About = () => {
             Me encanta mostrar los resultados a los usuarios, lo que me apasiona de esta área. Estoy comprometido con sacar adelante mis proyectos y que estos sean reconocidos.
           </p>
           <div className="flex gap-3">
-            <a href="#">
+            <a href="https://github.com/royandresdev" target="_blank">
               <Icon icon="mdi:github" className="text-4xl text-primary-100 hover:text-secondary-base" />
             </a>
-            <a href="#">
+            <a href="https://www.linkedin.com/in/royhuamanavila" target="_blank">
               <Icon icon="mdi:linkedin" className="text-4xl text-primary-100 hover:text-secondary-base" />
             </a>
           </div>
