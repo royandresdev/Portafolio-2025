@@ -32,4 +32,26 @@ export const projects = [
     linkRepo: "",
     linkFigma: "",
   },
+  {
+    image:
+      "https://res.cloudinary.com/dcvwghrfp/image/upload/v1746998250/PokemonWebFrame_rcf6kq.png",
+    name: "PokeWeb",
+    technologies: ["React", "Bootstrap", "Javascript"],
+    description:
+      "Sitio web con funciones de Pokedex y almacenamiento Pokémon. Permite a los usuarios buscar información detallada sobre diferentes Pokémon, como estadísticas, habilidades y tipos. Además, incluye una funcionalidad para guardar una lista personalizada de Pokémon favoritos.",
+    linkDemo: "",
+    linkRepo: "",
+    linkFigma: "",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dcvwghrfp/image/upload/v1746998250/PokemonWebFrame_rcf6kq.png",
+    name: "PokeWeb",
+    technologies: ["React", "Bootstrap", "Javascript"],
+    description:
+      "Sitio web con funciones de Pokedex y almacenamiento Pokémon. Permite a los usuarios buscar información detallada sobre diferentes Pokémon, como estadísticas, habilidades y tipos. Además, incluye una funcionalidad para guardar una lista personalizada de Pokémon favoritos.",
+    linkDemo: "",
+    linkRepo: "",
+    linkFigma: "",
+  },
 ];

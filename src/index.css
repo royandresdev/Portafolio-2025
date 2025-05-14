@@ -109,3 +109,12 @@
     transition: all 0.25s;
   }
 }
+
+@utility carousel-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -3,9 +3,9 @@ import Frame from "./Frame"
 
 const ProjectCard = ({ image, name, technologies, description, linkDemo, linkRepo, linkFigma }) => {
   return (
-    <Frame className="bg-primary-600 px-8 pt-4 pb-8 flex flex-col gap-3 flex-1">
-      <div className="">
-        <img className="max-w-[342px]" src={image} alt="Project Image" />
+    <Frame styleContent="bg-primary-600 px-8 pt-4 pb-8 flex flex-col gap-3 flex-1 w-full h-full" styleFrame="h-full">
+      <div>
+        <img src={image} alt="Project Image" />
       </div>
       <h4 className="">{name}</h4>
       <div className="space-x-2 ">
@@ -13,7 +13,7 @@ const ProjectCard = ({ image, name, technologies, description, linkDemo, linkRep
           technologies.map((tech) => <span className="bg-primary-500 px-1 py-0.5 rounded text-secondary-base">{tech}</span>)
         }
       </div>
-      <p className="w-[320px] flex-1">
+      <p className="w-full flex-1">
         {description}
       </p>
       <div className="space-x-2">

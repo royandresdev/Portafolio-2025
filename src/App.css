@@ -1,0 +1,6 @@
+.carousel-indicators {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  cursor: pointer;
+}
