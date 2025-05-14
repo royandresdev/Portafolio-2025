@@ -31,7 +31,7 @@ const Skills = () => {
           </div>
           <div className="w-[660px]">
             <p className="mb-4">En esta sección puedes ver las tecnologías que domino como desarrollador frontend. Estas son las que uso para diseñar aplicaciones y páginas web:</p>
-            <Frame className="flex gap-4 py-4 items-center bg-primary-base">
+            <Frame styleContent="flex gap-4 py-4 items-center bg-primary-base">
               <div className="px-4">
                 <Icon icon="mdi:react" className="text-7xl text-secondary-100" />
                 <p className="text-center">React</p>
