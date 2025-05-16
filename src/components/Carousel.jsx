@@ -24,8 +24,9 @@ const Carousel = ({ itemsToView, children }) => {
           ref={containerRef}
         >
           <div className="carousel-slider h-full flex" ref={sliderRef}>
-            {children.map((child) => (
+            {children.map((child, index) => (
               <div
+                key={index}
                 className="carousel-item h-full px-2 overflow-hidden"
                 style={{ width: itemWidth }}
               >

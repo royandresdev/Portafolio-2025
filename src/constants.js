@@ -1,5 +1,6 @@
 export const projects = [
   {
+    id: 1,
     image:
       "https://res.cloudinary.com/dcvwghrfp/image/upload/v1730772582/edutrack_banner.png",
     name: "EDUTRACK",
@@ -11,6 +12,7 @@ export const projects = [
     linkFigma: "",
   },
   {
+    id: 2,
     image:
       "https://res.cloudinary.com/dcvwghrfp/image/upload/v1746997874/PatitasFrame_iythtb.png",
     name: "Patitas",
@@ -22,6 +24,7 @@ export const projects = [
     linkFigma: "",
   },
   {
+    id: 3,
     image:
       "https://res.cloudinary.com/dcvwghrfp/image/upload/v1746998250/PokemonWebFrame_rcf6kq.png",
     name: "PokeWeb",
@@ -33,6 +36,7 @@ export const projects = [
     linkFigma: "",
   },
   {
+    id: 4,
     image:
       "https://res.cloudinary.com/dcvwghrfp/image/upload/v1746998250/PokemonWebFrame_rcf6kq.png",
     name: "PokeWeb",
@@ -44,6 +48,7 @@ export const projects = [
     linkFigma: "",
   },
   {
+    id: 5,
     image:
       "https://res.cloudinary.com/dcvwghrfp/image/upload/v1746998250/PokemonWebFrame_rcf6kq.png",
     name: "PokeWeb",
