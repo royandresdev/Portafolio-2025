@@ -44,16 +44,13 @@ export function useCarousel(
   // This effect runs whenever the scroll position changes
   useEffect(() => {
     const handleScroll = () => {
-      if (!containerRef.current || !itemWidth) return;
+      if (!containerRef.current || itemWidth == 0) return;
       const { scrollLeft } = containerRef.current;
 
-      const newPosition = Math.ceil(scrollLeft / itemWidth);
+      const newPosition = Math.round(scrollLeft / itemWidth);
       setCurrentPosition(newPosition);
       setCanMoveRight(newPosition < totalPositions - 1);
       setCanMoveLeft(newPosition > 0);
-      console.log("newPosition: ", newPosition);
-      console.log("totalPositions: ", totalPositions);
-      console.log(newPosition < totalPositions - 1);
     };
 
     const container = containerRef.current;
