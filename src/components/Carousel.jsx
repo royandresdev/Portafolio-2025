@@ -1,6 +1,14 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useCarousel } from "../hooks/useCarousel";
 
+const CarouselItem = ({ children, width }) => {
+  return (
+    <div className="carousel-item h-full px-2 overflow-hidden" style={{ width }}>
+      {children}
+    </div>
+  );
+};
+
 const Carousel = ({ itemsToView, children }) => {
   const {
     containerRef,
@@ -24,15 +32,7 @@ const Carousel = ({ itemsToView, children }) => {
           ref={containerRef}
         >
           <div className="carousel-slider h-full flex" ref={sliderRef}>
-            {children.map((child, index) => (
-              <div
-                key={index}
-                className="carousel-item h-full px-2 overflow-hidden"
-                style={{ width: itemWidth }}
-              >
-                {child}
-              </div>
-            ))}
+            {children.map((child, index) => <CarouselItem key={index} width={itemWidth}>{child}</CarouselItem>)}
           </div>
         </div>
         <button
