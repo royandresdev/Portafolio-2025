@@ -4,13 +4,19 @@ const defaultOptions = {
   scrollBehavior: "smooth",
 };
 
-export function useCarousel(itemsToView = 1, options = defaultOptions) {
+export function useCarousel(
+  itemsToView = 1,
+  options = defaultOptions,
+  totalItems
+) {
   const { scrollBehavior } = options;
   const containerRef = useRef(null);
   const sliderRef = useRef(null);
   const [itemWidth, setItemWidth] = useState(0);
   const [canMoveRight, setCanMoveRight] = useState(true);
   const [canMoveLeft, setCanMoveLeft] = useState(false);
+  const totalPositions = Math.max(totalItems - itemsToView + 1, 1);
+  const [currentPosition, setCurrentPosition] = useState(0);
 
   const handleMoveRight = () => {
     if (!containerRef.current) return;
@@ -38,12 +44,16 @@ export function useCarousel(itemsToView = 1, options = defaultOptions) {
   // This effect runs whenever the scroll position changes
   useEffect(() => {
     const handleScroll = () => {
-      if (!containerRef.current) return;
-      const { scrollWidth, scrollLeft, clientWidth } = containerRef.current;
-      const maxScroll = scrollWidth - clientWidth;
+      if (!containerRef.current || !itemWidth) return;
+      const { scrollLeft } = containerRef.current;
 
-      setCanMoveRight(scrollLeft < maxScroll);
-      setCanMoveLeft(scrollLeft > 0);
+      const newPosition = Math.ceil(scrollLeft / itemWidth);
+      setCurrentPosition(newPosition);
+      setCanMoveRight(newPosition < totalPositions - 1);
+      setCanMoveLeft(newPosition > 0);
+      console.log("newPosition: ", newPosition);
+      console.log("totalPositions: ", totalPositions);
+      console.log(newPosition < totalPositions - 1);
     };
 
     const container = containerRef.current;
@@ -56,7 +66,7 @@ export function useCarousel(itemsToView = 1, options = defaultOptions) {
     return () => {
       if (container) container.removeEventListener("scroll", handleScroll);
     };
-  }, [itemWidth]);
+  }, [itemWidth, totalPositions]);
 
   // Update item width based on the number of items to view and the container width
   useEffect(() => {
@@ -82,5 +92,7 @@ export function useCarousel(itemsToView = 1, options = defaultOptions) {
     itemWidth,
     canMoveRight,
     canMoveLeft,
+    currentPosition,
+    totalPositions,
   };
 }

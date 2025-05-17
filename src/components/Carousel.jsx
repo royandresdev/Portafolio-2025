@@ -4,9 +4,18 @@ import { Children } from "react";
 
 const CarouselItem = ({ children, width }) => {
   return (
-    <div className="carousel-item h-full px-2 overflow-hidden" style={{ width }}>
+    <div
+      className="carousel-item h-full px-2 overflow-hidden"
+      style={{ width }}
+    >
       {children}
     </div>
+  );
+};
+
+const CarouselIndicator = ({ isActive }) => {
+  return (
+    <div className={`carousel-indicator ${isActive ? "isActive" : ""}`}></div>
   );
 };
 
@@ -16,12 +25,20 @@ const Carousel = ({ itemsToView, children }) => {
     sliderRef,
     handleMoveLeft,
     handleMoveRight,
+    canMoveLeft,
+    canMoveRight,
     itemWidth,
-  } = useCarousel(itemsToView, { scrollBehavior: "smooth" });
+    totalPositions,
+    currentPosition,
+  } = useCarousel(itemsToView, { scrollBehavior: "smooth" }, children.length);
   return (
     <div>
       <div id="carousel" className="w-full flex items-center mb-4">
-        <button className="btn-secondary px-2 size-10" onClick={handleMoveLeft}>
+        <button
+          className={`btn-secondary px-2 size-10 ${canMoveLeft ? "" : "opacity-0 cursor-default"}`}
+          onClick={handleMoveLeft}
+          disabled={!canMoveLeft}
+        >
           <Icon
             icon="material-symbols:arrow-right"
             height={24}
@@ -41,22 +58,25 @@ const Carousel = ({ itemsToView, children }) => {
                     {child}
                   </CarouselItem>
                 );
-              }
-              )
+              })
             }
           </div>
         </div>
         <button
-          className="btn-secondary px-2 size-10"
+          className={`btn-secondary px-2 size-10 ${canMoveRight ? "" : "opacity-0 cursor-default"
+            }`}
+          disabled={!canMoveRight}
           onClick={handleMoveRight}
         >
           <Icon icon="material-symbols:arrow-right" height={24} />
         </button>
       </div>
-      <div className="carousel-indicators">
-        <div className="h-[12px] w-[32px] bg-grey-500 rounded"></div>
-        <div className="h-[12px] w-[32px] bg-grey-500 rounded"></div>
-        <div className="h-[12px] w-[32px] bg-grey-500 rounded"></div>
+      <div className="flex justify-center items-center gap-2">
+        {Array.from({ length: totalPositions }, (_, index) => {
+          const isActive = index === currentPosition;
+
+          return <CarouselIndicator key={index} isActive={isActive} />;
+        })}
       </div>
     </div>
   );
