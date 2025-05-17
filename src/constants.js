@@ -1,5 +1,6 @@
 export const projects = [
   {
+    id: 1,
     image:
       "https://res.cloudinary.com/dcvwghrfp/image/upload/v1730772582/edutrack_banner.png",
     name: "EDUTRACK",
@@ -11,6 +12,7 @@ export const projects = [
     linkFigma: "",
   },
   {
+    id: 2,
     image:
       "https://res.cloudinary.com/dcvwghrfp/image/upload/v1746997874/PatitasFrame_iythtb.png",
     name: "Patitas",
@@ -22,6 +24,31 @@ export const projects = [
     linkFigma: "",
   },
   {
+    id: 3,
+    image:
+      "https://res.cloudinary.com/dcvwghrfp/image/upload/v1746998250/PokemonWebFrame_rcf6kq.png",
+    name: "PokeWeb",
+    technologies: ["React", "Bootstrap", "Javascript"],
+    description:
+      "Sitio web con funciones de Pokedex y almacenamiento Pokémon. Permite a los usuarios buscar información detallada sobre diferentes Pokémon, como estadísticas, habilidades y tipos. Además, incluye una funcionalidad para guardar una lista personalizada de Pokémon favoritos.",
+    linkDemo: "",
+    linkRepo: "",
+    linkFigma: "",
+  },
+  {
+    id: 4,
+    image:
+      "https://res.cloudinary.com/dcvwghrfp/image/upload/v1746998250/PokemonWebFrame_rcf6kq.png",
+    name: "PokeWeb",
+    technologies: ["React", "Bootstrap", "Javascript"],
+    description:
+      "Sitio web con funciones de Pokedex y almacenamiento Pokémon. Permite a los usuarios buscar información detallada sobre diferentes Pokémon, como estadísticas, habilidades y tipos. Además, incluye una funcionalidad para guardar una lista personalizada de Pokémon favoritos.",
+    linkDemo: "",
+    linkRepo: "",
+    linkFigma: "",
+  },
+  {
+    id: 5,
     image:
       "https://res.cloudinary.com/dcvwghrfp/image/upload/v1746998250/PokemonWebFrame_rcf6kq.png",
     name: "PokeWeb",

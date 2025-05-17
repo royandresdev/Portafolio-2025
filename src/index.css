@@ -109,3 +109,21 @@
     transition: all 0.25s;
   }
 }
+
+@utility carousel-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility carousel-indicator {
+  @apply bg-grey-500 h-3 w-8 rounded;
+  transition: all 0.25s;
+
+  &.isActive {
+    @apply bg-secondary-base;
+  }
+}
