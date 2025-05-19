@@ -45,7 +45,7 @@ const Carousel = ({
   } = useCarousel(itemsToView, { scrollBehavior: "smooth" }, children.length);
   return (
     <div>
-      <div id="carousel" className={className} style={style}>
+      <div id="carousel" className={className}>
         <button
           className={`btn-secondary px-2 size-10 ${canMoveLeft ? "" : "opacity-0 cursor-default"
             }`}
@@ -63,7 +63,7 @@ const Carousel = ({
           className="carousel-container w-full flex overflow-x-scroll"
           ref={containerRef}
         >
-          <div className="carousel-slider h-full flex" ref={sliderRef}>
+          <div className="carousel-slider h-full flex" ref={sliderRef} style={style}>
             {
               //Asegura que el children sean un array
               Children.toArray(children).map((child, index) => {
