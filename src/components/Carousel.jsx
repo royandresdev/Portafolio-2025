@@ -19,7 +19,9 @@ const CarouselIndicator = ({ isActive }) => {
   );
 };
 
-const Carousel = ({ itemsToView, children }) => {
+const defaultClassName = "w-full flex items-center mb-4";
+
+const Carousel = ({ itemsToView, children, style, className = defaultClassName }) => {
   const {
     containerRef,
     sliderRef,
@@ -33,7 +35,7 @@ const Carousel = ({ itemsToView, children }) => {
   } = useCarousel(itemsToView, { scrollBehavior: "smooth" }, children.length);
   return (
     <div>
-      <div id="carousel" className="w-full flex items-center mb-4">
+      <div id="carousel" className={className} style={style}>
         <button
           className={`btn-secondary px-2 size-10 ${canMoveLeft ? "" : "opacity-0 cursor-default"}`}
           onClick={handleMoveLeft}
@@ -46,7 +48,7 @@ const Carousel = ({ itemsToView, children }) => {
           />
         </button>
         <div
-          className="carousel-container h-[560px] w-full flex overflow-x-scroll"
+          className="carousel-container w-full flex overflow-x-scroll"
           ref={containerRef}
         >
           <div className="carousel-slider h-full flex" ref={sliderRef}>
