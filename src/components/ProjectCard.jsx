@@ -1,7 +1,8 @@
 import { InlineIcon } from "@iconify/react/dist/iconify.js"
 import Frame from "./Frame"
 
-const ProjectCard = ({ image, name, technologies, description, linkDemo, linkRepo, linkFigma }) => {
+const ProjectCard = ({ project }) => {
+  const { name, description, image, technologies, linkDemo, linkRepo, linkFigma } = project
   return (
     <Frame styleContent="bg-primary-600 px-8 pt-4 pb-8 flex flex-col gap-3 flex-1 w-full h-full" styleFrame="h-full">
       <div>
