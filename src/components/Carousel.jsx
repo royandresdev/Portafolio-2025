@@ -15,11 +15,23 @@ const CarouselItem = ({ children, width }) => {
 
 const CarouselIndicator = ({ isActive }) => {
   return (
-    <div className={`carousel-indicator ${isActive ? "isActive" : ""}`}></div>
+    <div
+      className={`carousel-indicator ${isActive ? "isActive" : ""}`}
+      role="tab"
+      aria-selected={isActive}
+      aria-label="Indicador de carrusel"
+    ></div>
   );
 };
 
-const Carousel = ({ itemsToView, children }) => {
+const defaultClassName = "w-full flex items-center mb-4";
+
+const Carousel = ({
+  itemsToView,
+  children,
+  style,
+  className = defaultClassName,
+}) => {
   const {
     containerRef,
     sliderRef,
@@ -33,11 +45,13 @@ const Carousel = ({ itemsToView, children }) => {
   } = useCarousel(itemsToView, { scrollBehavior: "smooth" }, children.length);
   return (
     <div>
-      <div id="carousel" className="w-full flex items-center mb-4">
+      <div id="carousel" className={className} style={style}>
         <button
-          className={`btn-secondary px-2 size-10 ${canMoveLeft ? "" : "opacity-0 cursor-default"}`}
+          className={`btn-secondary px-2 size-10 ${canMoveLeft ? "" : "opacity-0 cursor-default"
+            }`}
           onClick={handleMoveLeft}
           disabled={!canMoveLeft}
+          aria-label="Anterior"
         >
           <Icon
             icon="material-symbols:arrow-right"
@@ -46,7 +60,7 @@ const Carousel = ({ itemsToView, children }) => {
           />
         </button>
         <div
-          className="carousel-container h-[560px] w-full flex overflow-x-scroll"
+          className="carousel-container w-full flex overflow-x-scroll"
           ref={containerRef}
         >
           <div className="carousel-slider h-full flex" ref={sliderRef}>
@@ -67,11 +81,12 @@ const Carousel = ({ itemsToView, children }) => {
             }`}
           disabled={!canMoveRight}
           onClick={handleMoveRight}
+          aria-label="Siguiente"
         >
           <Icon icon="material-symbols:arrow-right" height={24} />
         </button>
       </div>
-      <div className="flex justify-center items-center gap-2">
+      <div className="flex justify-center items-center gap-2" role="tablist">
         {Array.from({ length: totalPositions }, (_, index) => {
           const isActive = index === currentPosition;
 
