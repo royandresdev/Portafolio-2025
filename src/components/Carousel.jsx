@@ -15,13 +15,23 @@ const CarouselItem = ({ children, width }) => {
 
 const CarouselIndicator = ({ isActive }) => {
   return (
-    <div className={`carousel-indicator ${isActive ? "isActive" : ""}`}></div>
+    <div
+      className={`carousel-indicator ${isActive ? "isActive" : ""}`}
+      role="tab"
+      aria-selected={isActive}
+      aria-label="Indicador de carrusel"
+    ></div>
   );
 };
 
 const defaultClassName = "w-full flex items-center mb-4";
 
-const Carousel = ({ itemsToView, children, style, className = defaultClassName }) => {
+const Carousel = ({
+  itemsToView,
+  children,
+  style,
+  className = defaultClassName,
+}) => {
   const {
     containerRef,
     sliderRef,
@@ -37,9 +47,11 @@ const Carousel = ({ itemsToView, children, style, className = defaultClassName }
     <div>
       <div id="carousel" className={className} style={style}>
         <button
-          className={`btn-secondary px-2 size-10 ${canMoveLeft ? "" : "opacity-0 cursor-default"}`}
+          className={`btn-secondary px-2 size-10 ${canMoveLeft ? "" : "opacity-0 cursor-default"
+            }`}
           onClick={handleMoveLeft}
           disabled={!canMoveLeft}
+          aria-label="Anterior"
         >
           <Icon
             icon="material-symbols:arrow-right"
@@ -69,11 +81,12 @@ const Carousel = ({ itemsToView, children, style, className = defaultClassName }
             }`}
           disabled={!canMoveRight}
           onClick={handleMoveRight}
+          aria-label="Siguiente"
         >
           <Icon icon="material-symbols:arrow-right" height={24} />
         </button>
       </div>
-      <div className="flex justify-center items-center gap-2">
+      <div className="flex justify-center items-center gap-2" role="tablist">
         {Array.from({ length: totalPositions }, (_, index) => {
           const isActive = index === currentPosition;
 
