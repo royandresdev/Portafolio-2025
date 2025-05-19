@@ -78,7 +78,7 @@
   --color-grey-700: #181515;
 }
 
-@utility section-tittle {
+@utility section-title {
   @apply text-primary-100 mb-6 text-base block;
   letter-spacing: 0.2rem;
 }

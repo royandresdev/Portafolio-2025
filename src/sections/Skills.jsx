@@ -8,7 +8,7 @@ const Skills = () => {
   return (
     <section id="skills" className="section-container bg-primary-700">
       <div className="section-content">
-        <span className="section-tittle">- MI APRENDIZAJE</span>
+        <span className="section-title">- MI APRENDIZAJE</span>
         <h2 className="text-secondary-base mb-4">Educación y Habilidades</h2>
         <div className="flex justify-between">
           <div>
