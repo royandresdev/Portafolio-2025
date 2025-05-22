@@ -14,11 +14,11 @@ const Contact = () => {
     emailjs.sendForm(serviceID, templateID, form.current, { publicKey }).then(
       (result) => {
         console.log(result.text);
-        alert("Mensaje enviado");
+        //alert("Mensaje enviado");
       },
       (error) => {
         console.log(error.text);
-        alert("Error al enviar el mensaje");
+        //alert("Error al enviar el mensaje");
       }
     );
   };
@@ -39,7 +39,7 @@ const Contact = () => {
                 Nombre
               </label>
               <input
-                className="block bg-primary-600 border border-primary-300 rounded w-full"
+                className="block bg-primary-600 border border-primary-300 rounded w-full text-primary-100 p-2"
                 type="text"
                 id="name"
                 name="name"
@@ -50,7 +50,7 @@ const Contact = () => {
                 Correo
               </label>
               <input
-                className="block bg-primary-600 border border-primary-300 rounded w-full"
+                className="block bg-primary-600 border border-primary-300 rounded w-full text-primary-100 p-2"
                 type="text"
                 id="email"
                 name="email"
@@ -62,7 +62,7 @@ const Contact = () => {
               </label>
               <textarea
                 rows={6}
-                className="block bg-primary-600 border border-primary-300 rounded w-full"
+                className="block bg-primary-600 border border-primary-300 rounded w-full text-primary-100 p-2"
                 type="text"
                 id="message"
                 name="message"
