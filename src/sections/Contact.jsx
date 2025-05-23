@@ -1,27 +1,8 @@
 import { Icon } from "@iconify/react";
-import emailjs from "@emailjs/browser";
-import { useRef } from "react";
-
-const serviceID = import.meta.env.VITE_SERVICE_ID;
-const templateID = import.meta.env.VITE_TEMPLATE_ID;
-const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+import { useEmail } from "../hooks/useEmail";
 
 const Contact = () => {
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-    emailjs.sendForm(serviceID, templateID, form.current, { publicKey }).then(
-      (result) => {
-        console.log(result.text);
-        alert("Mensaje enviado");
-      },
-      (error) => {
-        console.log(error.text);
-        alert("Error al enviar el mensaje");
-      }
-    );
-  };
+  const { formRef, sendEmail, isLoading } = useEmail();
 
   return (
     <section id="contact" className="section-container bg-primary-700">
@@ -33,13 +14,13 @@ const Contact = () => {
           que has visto. Aquí puedes encontrar mis datos de contacto.
         </p>
         <div className="flex items-start w-full gap-12">
-          <form className="w-[600px]" ref={form} onSubmit={sendEmail}>
+          <form className="w-[600px]" ref={formRef} onSubmit={sendEmail}>
             <div className="mb-4">
               <label className="block mb-2" htmlFor="name">
                 Nombre
               </label>
               <input
-                className="block bg-primary-600 border border-primary-300 rounded w-full"
+                className="block bg-primary-600 border border-primary-300 rounded w-full text-primary-100 p-2"
                 type="text"
                 id="name"
                 name="name"
@@ -50,7 +31,7 @@ const Contact = () => {
                 Correo
               </label>
               <input
-                className="block bg-primary-600 border border-primary-300 rounded w-full"
+                className="form-input w-full"
                 type="text"
                 id="email"
                 name="email"
@@ -62,16 +43,17 @@ const Contact = () => {
               </label>
               <textarea
                 rows={6}
-                className="block bg-primary-600 border border-primary-300 rounded w-full"
+                className="form-input w-full"
                 type="text"
                 id="message"
                 name="message"
               />
             </div>
             <input
+              disabled={isLoading}
               className="btn-secondary w-full"
               type="submit"
-              value="Enviar Mensaje"
+              value={isLoading ? "Enviando..." : "Enviar Mensaje"}
             />
           </form>
           <div className="space-y-8">
