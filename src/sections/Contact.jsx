@@ -31,7 +31,7 @@ const Contact = () => {
                 Correo
               </label>
               <input
-                className="block bg-primary-600 border border-primary-300 rounded w-full text-primary-100 p-2"
+                className="form-input w-full"
                 type="text"
                 id="email"
                 name="email"
@@ -43,7 +43,7 @@ const Contact = () => {
               </label>
               <textarea
                 rows={6}
-                className="block bg-primary-600 border border-primary-300 rounded w-full text-primary-100 p-2"
+                className="form-input w-full"
                 type="text"
                 id="message"
                 name="message"
