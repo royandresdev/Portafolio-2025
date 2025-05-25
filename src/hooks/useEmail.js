@@ -9,8 +9,7 @@ export function useEmail() {
   const [isLoading, setIsLoading] = useState(false);
   const formRef = useRef(null);
 
-  const sendEmail = async (e) => {
-    e.preventDefault();
+  const sendEmail = async () => {
     setIsLoading(true);
     try {
       const result = await emailjs.sendForm(

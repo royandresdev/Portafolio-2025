@@ -1,9 +1,6 @@
 import { Icon } from "@iconify/react";
-import { useEmail } from "../hooks/useEmail";
-
+import { ContactForm } from "../components";
 const Contact = () => {
-  const { formRef, sendEmail, isLoading } = useEmail();
-
   return (
     <section id="contact" className="section-container bg-primary-700">
       <div className="section-content">
@@ -14,48 +11,7 @@ const Contact = () => {
           que has visto. Aquí puedes encontrar mis datos de contacto.
         </p>
         <div className="flex items-start w-full gap-12">
-          <form className="w-[600px]" ref={formRef} onSubmit={sendEmail}>
-            <div className="mb-4">
-              <label className="block mb-2" htmlFor="name">
-                Nombre
-              </label>
-              <input
-                className="block bg-primary-600 border border-primary-300 rounded w-full text-primary-100 p-2"
-                type="text"
-                id="name"
-                name="name"
-              />
-            </div>
-            <div className="mb-4">
-              <label className="block mb-2" htmlFor="email">
-                Correo
-              </label>
-              <input
-                className="form-input w-full"
-                type="text"
-                id="email"
-                name="email"
-              />
-            </div>
-            <div className="mb-4">
-              <label className="block mb-2" htmlFor="message">
-                Mensaje
-              </label>
-              <textarea
-                rows={6}
-                className="form-input w-full"
-                type="text"
-                id="message"
-                name="message"
-              />
-            </div>
-            <input
-              disabled={isLoading}
-              className="btn-secondary w-full"
-              type="submit"
-              value={isLoading ? "Enviando..." : "Enviar Mensaje"}
-            />
-          </form>
+          <ContactForm />
           <div className="space-y-8">
             <div className="flex gap-4 items-center">
               <Icon
