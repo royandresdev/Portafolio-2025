@@ -9,8 +9,7 @@ export function useEmail() {
   const [isLoading, setIsLoading] = useState(false);
   const formRef = useRef(null);
 
-  const sendEmail = async (e) => {
-    e.preventDefault();
+  const sendEmail = async () => {
     setIsLoading(true);
     try {
       const result = await emailjs.sendForm(
@@ -19,13 +18,13 @@ export function useEmail() {
         formRef.current,
         publicKey
       );
-      console.log(result.text);
-      alert("Mensaje enviado");
+      console.log("Su mensaje ha sido enviado correctamente: " + result.text);
+      alert("Su mensaje ha sido enviado correctamente: " + result.text);
     } catch (error) {
-      console.log(error.text);
-      alert("Error al enviar el mensaje");
+      throw new Error("Error al enviar el mensaje: " + error);
     } finally {
       setIsLoading(false);
+      formRef.current.reset();
     }
   };
 
