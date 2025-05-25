@@ -19,13 +19,13 @@ export function useEmail() {
         formRef.current,
         publicKey
       );
-      console.log(result.text);
-      alert("Mensaje enviado");
+      console.log("Su mensaje ha sido enviado correctamente: " + result.text);
+      alert("Su mensaje ha sido enviado correctamente: " + result.text);
     } catch (error) {
-      console.log(error.text);
-      alert("Error al enviar el mensaje");
+      throw new Error("Error al enviar el mensaje: " + error);
     } finally {
       setIsLoading(false);
+      formRef.current.reset();
     }
   };
 
