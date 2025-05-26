@@ -1,7 +1,11 @@
 
 # 💼 RoyAndresDev - Portafolio
 
-Este es mi portafolio personal, creado con React y TailwindCSS. Aquí podrás encontrar información sobre mí, mis proyectos recientes, educación, habilidades y experiencia laboral. También incluye un formulario de contacto para que puedas comunicarte conmigo fácilmente.  
+![image](https://github.com/user-attachments/assets/a5baa024-fcd4-49e5-9669-ae55f36d5f87)
+
+Este es mi portafolio personal, creado con **React** y **TailwindCSS**. Aquí podrás encontrar información sobre mí, mis proyectos recientes, educación, habilidades y experiencia laboral. También incluye un formulario de contacto para que puedas comunicarte conmigo fácilmente. 
+
+
 
 ---
 
