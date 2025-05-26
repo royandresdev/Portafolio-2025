@@ -59,6 +59,11 @@
   --color-primary-600: #333333;
   --color-primary-700: #151515;
 
+  --color-error: #ff3333;
+  --color-warning: #ffaa00;
+  --color-success: #00ff99;
+  --color-info: #3399ff;
+
   --color-secondary-base: #00ff99;
   --color-secondary-100: #00ff99;
   --color-secondary-200: #00d27d;
@@ -135,6 +140,10 @@
 
 @utility form-input {
   @apply block bg-primary-600 border border-primary-300 rounded text-primary-100 p-2;
+
+  &[data-error="true"] {
+    @apply border-error;
+  }
 }
 
 input:-webkit-autofill,

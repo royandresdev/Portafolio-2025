@@ -57,30 +57,32 @@ function ContactForm() {
                 Nombre
               </label>
               <input
-                className="block bg-primary-600 border border-primary-300 rounded w-full text-primary-100 p-2"
+                className="form-input w-full mb-2"
                 type="text"
                 id="name"
                 name="name"
                 value={values.name}
                 onChange={handleChange}
                 onBlur={handleBlur}
+                data-error={errors.name && touched.name ? true : false}
               />
-              {(touched.name && errors.name) && <div className="text-red-500 text-sm">{errors.name}</div>}
+              {(touched.name && errors.name) && <div className="text-error text-sm">{errors.name}</div>}
             </div>
             <div className="mb-4">
               <label className="block mb-2" htmlFor="email">
                 Correo
               </label>
               <input
-                className="form-input w-full"
+                className="form-input w-full mb-2"
                 type="email"
                 id="email"
                 name="email"
                 value={values.email}
                 onChange={handleChange}
                 onBlur={handleBlur}
+                data-error={errors.email && touched.email ? true : false}
               />
-              {(touched.email && errors.email) && <div className="text-red-500 text-sm">{errors.email}</div>}
+              {(touched.email && errors.email) && <div className="text-error text-sm">{errors.email}</div>}
             </div>
             <div className="mb-4">
               <label className="block mb-2" htmlFor="message">
@@ -88,14 +90,15 @@ function ContactForm() {
               </label>
               <textarea
                 rows={6}
-                className="form-input w-full"
+                className="form-input w-full mb-2"
                 id="message"
                 name="message"
                 value={values.message}
                 onChange={handleChange}
                 onBlur={handleBlur}
+                data-error={errors.message && touched.message ? true : false}
               />
-              {(touched.message && errors.message) && <div className="text-red-500 text-sm">{errors.message}</div>}
+              {(touched.message && errors.message) && <div className="text-error text-sm">{errors.message}</div>}
             </div>
             <input
               disabled={isSubmitting}
