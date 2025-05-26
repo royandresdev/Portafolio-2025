@@ -1,11 +1,11 @@
 
 # 💼 RoyAndresDev - Portafolio
 
-Portafolio web hecho con **react** en el cual me podrás conocer mejor, mis habilidades, proyectos y experiencia.  
+Este es mi portafolio personal, creado con React y TailwindCSS. Aquí podrás encontrar información sobre mí, mis proyectos recientes, educación, habilidades y experiencia laboral. También incluye un formulario de contacto para que puedas comunicarte conmigo fácilmente.  
 
 ---
 
-## 🚀 Demo en Vercel
+## 🚀 Demo en Firebase
 
 > 🚧 Aún en progreso 🚧
 
@@ -13,11 +13,11 @@ Portafolio web hecho con **react** en el cual me podrás conocer mejor, mis habi
 
 ## ✨ Contenido del Portafolio
 
-  - [ ] Acerca de mí.
-  - [ ] Proyectos recientes.
-  - [ ] Educación y Skills
-  - [ ] Experiencia
-  - [ ] Contacto
+  - [x] Acerca de mí.
+  - [x] Proyectos recientes.
+  - [x] Educación y Skills
+  - [x] Experiencia
+  - [x] Contacto
 
 
 ---
@@ -30,15 +30,41 @@ Usé [TailwindCSS](https://tailwindcss.com/) porque:
 - Facilita crear una interfaz profesional con clases utilitarias.
 - Compatible con diseño responsivo y animaciones CSS avanzadas.
 
+### 📧 ¿Por qué EmailJS?
+Usé [EmailJS](https://www.emailjs.com/) porque:
+- Permite enviar correos electrónicos directamente desde el navegador.
+- No requiere backend para manejar formularios de contacto.
+- Fácil integración con React y otras bibliotecas frontend.
+  
+### 📦 ¿Por qué Vite?
+Usé [Vite](https://vitejs.dev/) porque:
+- Es un bundler moderno y rápido para aplicaciones web.
+- Mejora el rendimiento de construcción y desarrollo en comparación con Webpack.
+
+### 📚 ¿Por qué React?
+Usé [React](https://reactjs.org/) porque:
+- Es una biblioteca popular para construir interfaces de usuario.
+- Permite crear componentes reutilizables y escalables.
+- Facilita el manejo del estado y la lógica de la UI.
+
+### 📒 ¿Por qué Formik?
+Usé [Formik](https://formik.org/) porque:
+- Simplifica la gestión de formularios en React.
+- Facilita la validación y el manejo de errores.
+
+
 ## 📂 Estructura del Proyecto
 
 ```
 src/
 ├── assets/             # Archivos estáticos
 ├── components/         # Componentes de la página
+├── hooks/              # Hooks personalizados
 ├── sections/           # Secciones de la página principal
 ├── App.jsx             # Componente principal
 ├── main.jsx            # Entrada principal
+|── constants.js        # Constantes y configuraciones
+|── env.example         # Archivo de ejemplo para variables de entorno
 ```
 
 ---
