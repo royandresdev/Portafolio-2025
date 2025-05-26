@@ -21,7 +21,7 @@ const Contact = () => {
               />
               <div>
                 <p>Dirección</p>
-                <p className="text-secondary-base">Lima, Perú</p>
+                <a href="https://maps.app.goo.gl/LxKoSHqiybmKi9ZD9" target="_blank" className="text-secondary-base">Lima, Perú</a>
               </div>
             </div>
             <div className="flex gap-4 items-center">
@@ -32,7 +32,7 @@ const Contact = () => {
               />
               <div>
                 <p>Celular</p>
-                <p className="text-secondary-base">985 928 578</p>
+                <a href="https://wa.link/gijicg" target="_blank" className="text-secondary-base">985 928 578</a>
               </div>
             </div>
             <div className="flex gap-4 items-center">
@@ -43,7 +43,7 @@ const Contact = () => {
               />
               <div>
                 <p>Correo</p>
-                <p className="text-secondary-base">info@royandresdev.com</p>
+                <a href="mailto:contact@royandresdev.com" className="text-secondary-base">contact@royandresdev.com</a>
               </div>
             </div>
           </div>
