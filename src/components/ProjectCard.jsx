@@ -18,15 +18,21 @@ const ProjectCard = ({ project }) => {
         {description}
       </p>
       <div className="space-x-2">
-        <a href={linkDemo} target="_blank" className="btn-secondary-outline">
-          <InlineIcon icon="material-symbols:monitor" className="inline" /> Demo
-        </a>
-        <a href={linkRepo} target="_blank" className="btn-secondary-outline">
-          <InlineIcon icon="mdi:github" className="inline text-lg" /> Repositorio
-        </a>
-        <a href={linkFigma} target="_blank" className="btn-secondary-outline">
-          <InlineIcon icon="gg:figma" className="inline" /> Figma
-        </a>
+        {
+          linkDemo && <a href={linkDemo} target="_blank" className="btn-secondary-outline">
+            <InlineIcon icon="material-symbols:monitor" className="inline" /> Demo
+          </a>
+        }
+        {
+          linkRepo && <a href={linkRepo} target="_blank" className="btn-secondary-outline">
+            <InlineIcon icon="mdi:github" className="inline text-lg" /> Repositorio
+          </a>
+        }
+        {
+          linkFigma && <a href={linkFigma} target="_blank" className="btn-secondary-outline">
+            <InlineIcon icon="gg:figma" className="inline" /> Figma
+          </a>
+        }
       </div>
     </Frame>
   )
