@@ -21,7 +21,13 @@ const Contact = () => {
               />
               <div>
                 <p>Dirección</p>
-                <a href="https://maps.app.goo.gl/LxKoSHqiybmKi9ZD9" target="_blank" className="text-secondary-base">Lima, Perú</a>
+                <a
+                  href="https://maps.app.goo.gl/LxKoSHqiybmKi9ZD9"
+                  target="_blank"
+                  className="text-secondary-base hover:text-secondary-200 transition-colors duration-300"
+                >
+                  Lima, Perú
+                </a>
               </div>
             </div>
             <div className="flex gap-4 items-center">
@@ -32,18 +38,29 @@ const Contact = () => {
               />
               <div>
                 <p>Celular</p>
-                <a href="https://wa.link/gijicg" target="_blank" className="text-secondary-base">985 928 578</a>
+                <a
+                  href="https://wa.link/gijicg"
+                  target="_blank"
+                  className="text-secondary-base hover:text-secondary-200 transition-colors duration-300"
+                >
+                  985 928 578
+                </a>
               </div>
             </div>
             <div className="flex gap-4 items-center">
               <Icon
                 height={24}
                 icon="material-symbols:mail"
-                className="text-secondary-base"
+                className="text-secondary-base "
               />
               <div>
                 <p>Correo</p>
-                <a href="mailto:contact@royandresdev.com" className="text-secondary-base">contact@royandresdev.com</a>
+                <a
+                  href="mailto:contact@royandresdev.com"
+                  className="text-secondary-base hover:text-secondary-200 transition-colors duration-300"
+                >
+                  contact@royandresdev.com
+                </a>
               </div>
             </div>
           </div>
