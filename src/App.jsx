@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { NavBar } from './components'
 import { About, Contact, Experience, Projects, Skills } from './sections'
+import { Toaster } from 'sonner';
 
 function App() {
   const [currentSection, setCurrentSection] = useState(null);
@@ -31,6 +32,7 @@ function App() {
   }, [])
   return (
     <main>
+      <Toaster />
       <NavBar currentSection={currentSection} />
       <About />
       <Projects />
