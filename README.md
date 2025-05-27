@@ -56,6 +56,11 @@ Usé [Formik](https://formik.org/) porque:
 - Simplifica la gestión de formularios en React.
 - Facilita la validación y el manejo de errores.
 
+### 🪧 ¿Por qué Sonner?
+Usé [Sonner](https://sonner.dev/) porque:
+- Proporciona notificaciones elegantes.
+- Mejora la experiencia del usuario con mensajes de éxito, error y advertencia.
+- Fácil de integrar y usar en aplicaciones React.
 
 ## 📂 Estructura del Proyecto
 
