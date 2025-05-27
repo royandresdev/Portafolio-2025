@@ -12,19 +12,11 @@ export function useEmail() {
   const sendEmail = async () => {
     setIsLoading(true);
     try {
-      const result = await emailjs.sendForm(
-        serviceID,
-        templateID,
-        formRef.current,
-        publicKey
-      );
-      console.log("Su mensaje ha sido enviado correctamente: " + result.text);
-      alert("Su mensaje ha sido enviado correctamente: " + result.text);
+      await emailjs.sendForm(serviceID, templateID, formRef.current, publicKey);
     } catch (error) {
       throw new Error("Error al enviar el mensaje: " + error);
     } finally {
       setIsLoading(false);
-      formRef.current.reset();
     }
   };
 
