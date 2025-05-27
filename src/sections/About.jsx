@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import AvatarSrc from "../assets/Avatar.jpg"
-import { Frame } from '../components'
+import AvatarSrc from "../assets/Avatar.jpg";
+import { Frame } from "../components";
 
 const About = () => {
   return (
@@ -18,22 +18,43 @@ const About = () => {
             Frontend Developer
           </h1>
           <p className="mb-6">
-            ¡Bienvenido! Soy un entusiasta de la programación. Desde siempre me ha fascinado entender cómo funciona el software. Al codificar, siento que tengo la libertad de explotar al máximo mi creatividad, creando código sólido y profesional.
+            ¡Bienvenido! Soy un entusiasta de la programación. Desde siempre me
+            ha fascinado entender cómo funciona el software. Al codificar,
+            siento que tengo la libertad de explotar al máximo mi creatividad,
+            creando código sólido y profesional.
           </p>
           <p className="mb-6">
-            Me encanta mostrar los resultados a los usuarios, lo que me apasiona de esta área. Estoy comprometido con sacar adelante mis proyectos y que estos sean reconocidos.
+            Me encanta mostrar los resultados a los usuarios, lo que me apasiona
+            de esta área. Estoy comprometido con sacar adelante mis proyectos y
+            que estos sean reconocidos.
           </p>
           <div className="flex gap-3">
-            <a href="https://github.com/royandresdev" target="_blank">
-              <Icon icon="mdi:github" className="text-4xl text-primary-100 hover:text-secondary-base" />
+            <a
+              href="https://github.com/royandresdev"
+              target="_blank"
+              title="GitHub"
+              rel="noopener noreferrer"
+            >
+              <Icon
+                icon="mdi:github"
+                className="text-4xl text-primary-100 hover:text-secondary-base"
+              />
             </a>
-            <a href="https://www.linkedin.com/in/royhuamanavila" target="_blank">
-              <Icon icon="mdi:linkedin" className="text-4xl text-primary-100 hover:text-secondary-base" />
+            <a
+              href="https://www.linkedin.com/in/royhuamanavila"
+              target="_blank"
+              title="LinkedIn"
+              rel="noopener noreferrer"
+            >
+              <Icon
+                icon="mdi:linkedin"
+                className="text-4xl text-primary-100 hover:text-secondary-base"
+              />
             </a>
           </div>
         </div>
       </div>
     </section>
-  )
-}
-export default About
+  );
+};
+export default About;
