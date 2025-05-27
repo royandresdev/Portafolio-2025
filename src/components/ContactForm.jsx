@@ -1,3 +1,4 @@
+import { toast } from "sonner";
 import { useEmail } from "../hooks/useEmail";
 import { Formik } from "formik";
 
@@ -30,9 +31,9 @@ function ContactForm() {
     try {
       setSubmitting(true);
       await sendEmail(formRef);
-      alert("Su mensaje ha sido enviado correctamente.");
+      toast.success("Mensaje enviado correctamente");
     } catch (error) {
-      alert("Error al enviar el mensaje: " + error.message);
+      toast.error("Error al enviar el mensaje: " + error.message);
     } finally {
       setSubmitting(false);
       resetForm();
