@@ -7,8 +7,8 @@ export const projects = [
     technologies: ["React", "TailwindCSS", "Javascript"],
     description:
       "Solución digital diseñada para mejorar la comunicación y el seguimiento del progreso académico entre estudiantes, padres y profesores. La plataforma permite a los usuarios acceder a reportes en tiempo real, gestionar tareas y recibir notificaciones importantes.",
-    linkDemo: "https://github.com/RoyHuamanAvila/edutrack",
-    linkRepo: "https://edutrack-delta.vercel.app/",
+    linkDemo: "https://edutrack-delta.vercel.app/",
+    linkRepo: "https://github.com/RoyHuamanAvila/edutrack",
     linkFigma: "",
   },
   {
