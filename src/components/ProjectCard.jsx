@@ -11,7 +11,7 @@ const ProjectCard = ({ project }) => {
       <h4 className="">{name}</h4>
       <div className="space-x-2 ">
         {
-          technologies.map((tech) => <span className="bg-primary-500 px-1 py-0.5 rounded text-secondary-base">{tech}</span>)
+          technologies.map((tech, index) => <span key={index} className="bg-primary-500 px-1 py-0.5 rounded text-secondary-base">{tech}</span>)
         }
       </div>
       <p className="w-full flex-1">
