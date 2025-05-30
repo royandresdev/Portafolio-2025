@@ -54,10 +54,10 @@
   --color-primary-100: #eaeaea;
   --color-primary-200: #c2c2c2;
   --color-primary-300: #9b9b9b;
-  --color-primary-400: #767676;
+  --color-primary-400: #242424;
   --color-primary-500: #545454;
   --color-primary-600: #333333;
-  --color-primary-700: #151515;
+  --color-primary-700: #161616;
 
   --color-error: #ff3333;
   --color-warning: #ffaa00;
@@ -89,7 +89,7 @@
 }
 
 @utility section-container {
-  @apply h-dvh flex justify-center items-center;
+  @apply min-h-dvh flex justify-center items-center;
 }
 
 @utility section-content {

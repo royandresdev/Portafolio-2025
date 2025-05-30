@@ -36,4 +36,17 @@ export const projects = [
     linkFigma:
       "https://www.figma.com/design/OESp7H9x377M3LUT3S4pDs/Pokemon-Web?node-id=0-1&t=GjkXN3LnO5z6xfr5-1",
   },
+  {
+    id: 4,
+    image:
+      "https://res.cloudinary.com/dcvwghrfp/image/upload/v1746998250/PokemonWebFrame_rcf6kq.png",
+    name: "PokeWeb",
+    technologies: ["React", "Bootstrap", "Javascript"],
+    description:
+      "Sitio web con funciones de Pokedex y almacenamiento Pokémon. Permite a los usuarios buscar información detallada sobre diferentes Pokémon, como estadísticas, habilidades y tipos. Además, incluye una funcionalidad para guardar una lista personalizada de Pokémon favoritos.",
+    linkDemo: "https://pokemonweb-addcc.web.app/",
+    linkRepo: "https://github.com/RoyHuamanAvila/PokemonWeb",
+    linkFigma:
+      "https://www.figma.com/design/OESp7H9x377M3LUT3S4pDs/Pokemon-Web?node-id=0-1&t=GjkXN3LnO5z6xfr5-1",
+  },
 ];
