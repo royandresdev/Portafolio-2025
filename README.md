@@ -17,11 +17,11 @@ Este es mi portafolio personal, creado con **React** y **TailwindCSS**. Aquí po
 
 ## ✨ Contenido del Portafolio
 
-  - [x] Acerca de mí.
-  - [x] Proyectos recientes.
-  - [x] Educación y Skills
-  - [x] Experiencia
-  - [x] Contacto
+  - ✅ Acerca de mí.
+  - ✅ Proyectos recientes.
+  - ✅ Educación y Skills
+  - ✅ Experiencia
+  - ✅ Contacto
 
 
 ---
@@ -61,6 +61,11 @@ Usé [Sonner](https://sonner.dev/) porque:
 - Proporciona notificaciones elegantes.
 - Mejora la experiencia del usuario con mensajes de éxito, error y advertencia.
 - Fácil de integrar y usar en aplicaciones React.
+
+### 🔥 ¿Por qué Firebase Hosting?
+Usé [Firebase Hosting](https://firebase.google.com/docs/hosting) porque:
+- Proporciona un hosting rápido y seguro para aplicaciones web.
+- Permite desplegar aplicaciones con un solo comando.
 
 ## 📂 Estructura del Proyecto
 
