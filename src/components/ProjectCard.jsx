@@ -24,14 +24,14 @@ const ProjectCard = ({ project }) => {
         {technologies.map((tech, index) => (
           <span
             key={index}
-            className="bg-primary-base px-1 py-0.5 rounded text-primary-100"
+            className="bg-primary-base px-1 py-0.5 rounded text-primary-100 text-sm md:text-base"
           >
             {tech}
           </span>
         ))}
       </div>
-      <p className="w-full flex-1">{description}</p>
-      <div className="space-x-2">
+      <p className="w-full flex-1 text-sm md:text-base">{description}</p>
+      <div className="flex gap-2 flex-wrap">
         {linkDemo && (
           <a href={linkDemo} target="_blank" className="btn-secondary-outline">
             <InlineIcon icon="material-symbols:monitor" className="inline" />{" "}
