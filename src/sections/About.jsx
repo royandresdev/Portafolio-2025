@@ -4,14 +4,14 @@ import { Frame } from "../components";
 
 const About = () => {
   return (
-    <section id="about" className="section-container pt-14 bg-primary-700">
-      <div className="section-content flex gap-6 justify-center">
-        <Frame>
-          <div className="size-[500px] overflow-hidden">
+    <section id="about" className="section-container pt-20 bg-primary-700">
+      <div className="section-content flex flex-col md:flex-row gap-6 justify-center">
+        <Frame styleFrame="order-2 md:order-1 mx-4">
+          <div className="w-full aspect-square overflow-hidden md:max-w-[500px]">
             <img className="w-full" src={AvatarSrc} alt="Foto de Roy Huaman" />
           </div>
         </Frame>
-        <div className="flex-1/2 max-w-[500px]">
+        <div className="md:flex-1/2 max-w-[500px] px-4 md:px-0 md:order-2">
           <span className="section-title">- MI NOMBRE ES</span>
           <h1 className="leading-14 mb-6">
             <span className="text-secondary-base block">Roy Huaman</span>
