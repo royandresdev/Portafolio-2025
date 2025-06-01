@@ -11,7 +11,7 @@ const About = () => {
             <img className="w-full" src={AvatarSrc} alt="Foto de Roy Huaman" />
           </div>
         </Frame>
-        <div className="md:flex-1/2 max-w-[500px] px-4 md:px-0 md:order-2">
+        <div className="md:flex-1/2 max-w-[500px] md:order-2">
           <span className="section-title">- MI NOMBRE ES</span>
           <h1 className="leading-14 mb-6">
             <span className="text-secondary-base block">Roy Huaman</span>
