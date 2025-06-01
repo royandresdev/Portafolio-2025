@@ -81,6 +81,12 @@
   --color-grey-500: #595253;
   --color-grey-600: #373233;
   --color-grey-700: #181515;
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
 }
 
 @utility section-title {
@@ -89,7 +95,11 @@
 }
 
 @utility section-container {
-  @apply min-h-dvh flex justify-center items-center;
+  @apply min-h-dvh flex justify-center items-center px-4;
+
+  @media (min-width: var(--breakpoint-md)) {
+    @apply px-0;
+  }
 }
 
 @utility section-content {
