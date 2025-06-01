@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react"
 import Logo from "../assets/Logo.svg"
+import { Icon } from "@iconify/react/dist/iconify.js"
 const NavBar = ({ currentSection }) => {
   const navbarRef = useRef()
 
@@ -20,14 +21,15 @@ const NavBar = ({ currentSection }) => {
   }, [currentSection])
 
   return (
-    <nav id="navbar" ref={navbarRef} className="fixed bg-primary-400 left-0 right-0 shadow">
-      <div className="container mx-auto py-4 flex gap-3 justify-center relative">
-        <img className="absolute left-0 top-1/2 transform -translate-y-1/2" src={Logo} alt="Logo RoyAndresDev" />
-        <a href="#about">Acerca de mi</a>
-        <a href="#projects">Proyectos</a>
-        <a href="#experience">Experiencia</a>
-        <a href="#skills">Habilidades</a>
-        <a href="#contact">Contacto</a>
+    <nav id="navbar" ref={navbarRef} className="fixed top-0 left-0 w-full bg-primary-400 shadow min-h-[56px] overflow-x-hidden">
+      <div className="container mx-auto py-4 flex gap-3 md:justify-center justify-between relative px-4">
+        <img className="md:absolute left-0 top-1/2 md:transform md:-translate-y-1/2" src={Logo} alt="Logo RoyAndresDev" />
+        <a href="#about" className="md:block hidden">Acerca de mi</a>
+        <a href="#projects" className="md:block hidden">Proyectos</a>
+        <a href="#experience" className="md:block hidden">Experiencia</a>
+        <a href="#skills" className="md:block hidden">Habilidades</a>
+        <a href="#contact" className="md:block hidden">Contacto</a>
+        <Icon icon="mi:menu" className="size-10 text-secondary-base md:hidden" />
       </div>
     </nav>
   )
