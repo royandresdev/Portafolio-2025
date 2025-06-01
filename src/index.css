@@ -154,3 +154,32 @@ select:-webkit-autofill {
   -webkit-text-fill-color: var(--color-primary-100) !important;
   color: var(--color-primary-100) !important;
 }
+
+@utility frame {
+  @apply rounded overflow-hidden w-fit flex flex-col;
+
+  .frame-header {
+    @apply bg-primary-400 flex p-2 gap-1;
+  }
+
+  .frame-header-circle {
+    @apply size-2.5 rounded-full bg-secondary-base;
+  }
+}
+
+@utility frame-hover-effect {
+  @apply bg-secondary-200 transition-colors duration-1000;
+  transition: all 1s;
+
+  .frame-header {
+    @apply bg-secondary-300;
+  }
+
+  .frame-header-circle {
+    @apply bg-primary-400;
+  }
+
+  .frame-content {
+    box-shadow: inset 0 0 0 5px var(--color-secondary-300); /* Adjust thickness and color */
+  }
+}
