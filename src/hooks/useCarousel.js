@@ -2,21 +2,25 @@ import { useEffect, useRef, useState } from "react";
 
 const defaultOptions = {
   scrollBehavior: "smooth",
+  minItemWidth: 320,
 };
 
 export function useCarousel(
-  itemsToView = 1,
+  itemsToView = "auto",
   options = defaultOptions,
   totalItems
 ) {
-  const { scrollBehavior } = options;
+  const { scrollBehavior, minItemWidth } = options;
   const containerRef = useRef(null);
   const sliderRef = useRef(null);
   const [itemWidth, setItemWidth] = useState(0);
   const [canMoveRight, setCanMoveRight] = useState(true);
   const [canMoveLeft, setCanMoveLeft] = useState(false);
-  const totalPositions = Math.max(totalItems - itemsToView + 1, 1);
   const [currentPosition, setCurrentPosition] = useState(0);
+  const [autoItemsToView, setAutoItemsToView] = useState(
+    typeof itemsToView === "number" ? itemsToView : 1
+  );
+  const totalPositions = Math.max(totalItems - autoItemsToView + 1, 1);
 
   const handleMoveRight = () => {
     if (!containerRef.current) return;
@@ -70,8 +74,16 @@ export function useCarousel(
     if (!containerRef.current) return;
 
     const observer = new ResizeObserver(() => {
-      const itemWidth = containerRef.current.clientWidth / itemsToView;
-      setItemWidth(itemWidth);
+      const containerWidth = containerRef.current.clientWidth;
+      let items = 1;
+      if (itemsToView === "auto") {
+        items = Math.max(1, Math.floor(containerWidth / minItemWidth));
+        setAutoItemsToView(items);
+      } else {
+        items = itemsToView;
+        setAutoItemsToView(itemsToView);
+      }
+      setItemWidth(containerWidth / items);
     });
 
     observer.observe(containerRef.current);
@@ -79,7 +91,7 @@ export function useCarousel(
     return () => {
       observer.disconnect();
     };
-  }, [itemsToView]);
+  }, [itemsToView, minItemWidth]);
 
   return {
     containerRef,

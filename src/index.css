@@ -121,12 +121,18 @@
 }
 
 @utility carousel-container {
+  @apply w-full flex overflow-x-scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  scroll-snap-type: x mandatory;
 
   &::-webkit-scrollbar {
     display: none;
   }
+}
+
+@utility carousel-item {
+  scroll-snap-align: center;
 }
 
 @utility carousel-indicator {

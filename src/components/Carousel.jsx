@@ -42,7 +42,7 @@ const Carousel = ({
     itemWidth,
     totalPositions,
     currentPosition,
-  } = useCarousel(itemsToView, { scrollBehavior: "smooth" }, children.length);
+  } = useCarousel(itemsToView, { scrollBehavior: "smooth", minItemWidth: 320 }, children.length);
   return (
     <div>
       <div id="carousel" className={className}>
@@ -60,7 +60,7 @@ const Carousel = ({
           />
         </button>
         <div
-          className="carousel-container w-full flex overflow-x-scroll"
+          className="carousel-container"
           ref={containerRef}
         >
           <div className="carousel-slider h-full flex" ref={sliderRef} style={style}>
