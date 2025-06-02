@@ -10,7 +10,7 @@ const Skills = () => {
       <div className="section-content">
         <span className="section-title">- MI APRENDIZAJE</span>
         <h2 className="text-secondary-base mb-4">Educación y Habilidades</h2>
-        <div className="flex justify-between">
+        <div className="flex justify-between flex-col md:flex-row gap-8">
           <div>
             <div className="mb-8 flex gap-4 items-center">
               <img src={universityGrade} alt="University Grade Icon" />
@@ -29,9 +29,9 @@ const Skills = () => {
               </div>
             </div>
           </div>
-          <div className="w-[660px]">
-            <p className="mb-4">En esta sección puedes ver las tecnologías que domino como desarrollador frontend. Estas son las que uso para diseñar aplicaciones y páginas web:</p>
-            <Frame styleContent="flex gap-4 py-4 items-center bg-primary-400">
+          <div className="w-full md:w-fit">
+            <p className="mb-4 max-w-[660px]">En esta sección puedes ver las tecnologías que domino como desarrollador frontend. Estas son las que uso para diseñar aplicaciones y páginas web:</p>
+            <Frame styleContent="flex flex-wrap justify-center gap-4 py-4 items-center bg-primary-400">
               <div className="px-4">
                 <Icon icon="mdi:react" className="text-7xl text-secondary-100" />
                 <p className="text-center">React</p>
