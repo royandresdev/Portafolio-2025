@@ -10,7 +10,7 @@ const Contact = () => {
           Gracias por visitar mi portafolio web. Espero que te haya gustado lo
           que has visto. Aquí puedes encontrar mis datos de contacto.
         </p>
-        <div className="flex items-start w-full gap-12">
+        <div className="flex items-start w-full gap-12 flex-col md:flex-row">
           <ContactForm />
           <div className="space-y-8">
             <div className="flex gap-4 items-center">
