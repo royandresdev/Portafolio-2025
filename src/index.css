@@ -103,7 +103,7 @@
 }
 
 @utility section-content {
-  @apply container mx-auto;
+  @apply container mx-auto h-fit;
 }
 
 @utility btn-secondary-outline {
