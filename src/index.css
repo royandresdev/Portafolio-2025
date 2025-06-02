@@ -20,7 +20,11 @@
     font-size: 2.986rem;
   }
   h2 {
-    font-size: 2.488rem;
+    font-size: 1.5rem;
+
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+    }
   }
   h3 {
     font-size: 2.074rem;
@@ -29,10 +33,25 @@
     font-size: 1.728rem;
   }
   h5 {
-    font-size: 1.44rem;
+    font-size: 1.2rem;
+
+    @media (min-width: 768px) {
+      font-size: 1.5rem;
+    }
   }
   h6 {
-    font-size: 1.2rem;
+    font-size: 0.875rem;
+
+    @media (min-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+  p {
+    font-size: 0.875rem;
+
+    @media (min-width: 768px) {
+      font-size: 1rem;
+    }
   }
 
   small {
