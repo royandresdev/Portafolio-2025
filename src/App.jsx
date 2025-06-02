@@ -31,7 +31,7 @@ function App() {
     };
   }, [])
   return (
-    <main className='relative overflow-hidden'>
+    <main className='relative overflow-hidden bg-primary-700'>
       <Toaster />
       <NavBar currentSection={currentSection} />
       <About />
