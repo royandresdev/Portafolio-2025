@@ -90,12 +90,16 @@
 }
 
 @utility section-title {
-  @apply text-primary-100 mb-6 text-base block;
+  @apply text-primary-100 mb-6 block text-sm;
   letter-spacing: 0.2rem;
+
+  @media (min-width: var(--breakpoint-md)) {
+    @apply text-base;
+  }
 }
 
 @utility section-container {
-  @apply min-h-dvh flex justify-center items-center px-4;
+  @apply min-h-dvh flex justify-center items-center px-4 mb-10;
 
   @media (min-width: var(--breakpoint-md)) {
     @apply px-0;
