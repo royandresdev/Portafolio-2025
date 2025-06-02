@@ -52,7 +52,7 @@ function ContactForm() {
     >
       {
         ({ handleSubmit, isSubmitting, values, handleChange, handleBlur, errors, touched }) => (
-          <form className="w-[600px]" onSubmit={handleSubmit} ref={formRef}>
+          <form className="w-full max-w-[600px]" onSubmit={handleSubmit} ref={formRef}>
             <div className="mb-4">
               <label className="block mb-2" htmlFor="name">
                 Nombre
