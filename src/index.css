@@ -81,7 +81,7 @@
   }
 
   .section-container {
-    @apply min-h-dvh flex justify-center items-center px-4 mb-10;
+    @apply flex justify-center items-center px-4 mb-10;
   }
   @media (min-width: var(--breakpoint-md)) {
     .section-container {

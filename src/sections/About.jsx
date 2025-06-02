@@ -4,7 +4,7 @@ import { Frame } from "../components";
 
 const About = () => {
   return (
-    <section id="about" className="section-container pt-20 md:pt-[56px] bg-primary-700">
+    <section id="about" className="section-container min-h-dvh pt-20 md:pt-[56px] bg-primary-700">
       <div className="section-content flex flex-col md:flex-row gap-6 justify-center">
         <Frame styleFrame="order-2 md:order-1 mx-4">
           <div className="w-full aspect-square overflow-hidden md:max-w-[500px]">
