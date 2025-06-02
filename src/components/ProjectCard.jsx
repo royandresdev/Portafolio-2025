@@ -17,7 +17,7 @@ const ProjectCard = ({ project }) => {
       styleFrame="h-full project-card"
     >
       <div>
-        <img src={image} alt="Project Image" />
+        <img className="w-full aspect-video object-cover" src={image} alt="Project Image" />
       </div>
       <h4 className="">{name}</h4>
       <div className="space-x-2 ">

@@ -3,7 +3,7 @@ export const projects = [
     id: 1,
     image:
       "https://res.cloudinary.com/dcvwghrfp/image/upload/v1730772582/edutrack_banner.png",
-    name: "EDUTRACK",
+    name: "Edutrack",
     technologies: ["React", "TailwindCSS", "Javascript"],
     description:
       "Solución digital diseñada para mejorar la comunicación y el seguimiento del progreso académico entre estudiantes, padres y profesores. La plataforma permite a los usuarios acceder a reportes en tiempo real, gestionar tareas y recibir notificaciones importantes.",
