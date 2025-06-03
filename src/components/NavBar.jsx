@@ -99,7 +99,7 @@ const NavBarMobile = ({ currentSection }) => {
         className="container mx-auto py-4 flex gap-3 md:justify-center justify-between relative px-4"
       >
         <a
-          className="md:absolute left-0 top-1/2 md:transform md:-translate-y-1/2"
+          className="flex items-center justify-center"
           href="#about"
         >
           <img src={Logo} alt="Logo RoyAndresDev" />
