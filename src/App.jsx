@@ -13,7 +13,6 @@ function App() {
     const observer = new IntersectionObserver((entries) => {
       const visibleEntry = entries.find((entry) => entry.isIntersecting);
       if (visibleEntry) {
-        console.log(visibleEntry.target.id)
         setCurrentSection(visibleEntry.target.id);
       }
     }, {
