@@ -98,11 +98,12 @@ const NavBarMobile = ({ currentSection }) => {
         ref={sideMenuRef}
         className="container mx-auto py-4 flex gap-3 md:justify-center justify-between relative px-4"
       >
-        <img
+        <a
           className="md:absolute left-0 top-1/2 md:transform md:-translate-y-1/2"
-          src={Logo}
-          alt="Logo RoyAndresDev"
-        />
+          href="#about"
+        >
+          <img src={Logo} alt="Logo RoyAndresDev" />
+        </a>
         <button onClick={handleMenuOpen}>
           <Icon
             icon="mi:menu"
