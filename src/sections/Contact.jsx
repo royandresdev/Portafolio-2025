@@ -39,11 +39,11 @@ const Contact = () => {
               <div>
                 <p>Celular</p>
                 <a
-                  href="https://wa.link/gijicg"
+                  href="https://wa.link/jy4ctb"
                   target="_blank"
                   className="text-secondary-base hover:text-secondary-200 transition-colors duration-300"
                 >
-                  985 928 578
+                  963 860 273
                 </a>
               </div>
             </div>
