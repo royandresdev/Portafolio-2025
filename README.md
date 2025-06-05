@@ -10,6 +10,8 @@ Este es mi portafolio personal, creado con **React** y **TailwindCSS**. Aquí po
 ## 💹 Implementación de Google Analytics
 He implementado Google Analytics como parte de mi portafolio para probar esta funcionalidad para rastrear el tráfico del sitio web y obtener información sobre los visitantes.
 
+![analytics](https://github.com/user-attachments/assets/b67f5a89-7d47-4214-af2b-21917d227b28)
+
 ---
 
 ## 🚀 Demo 
