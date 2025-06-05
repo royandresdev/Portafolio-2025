@@ -5,7 +5,10 @@
 
 Este es mi portafolio personal, creado con **React** y **TailwindCSS**. Aquí podrás encontrar información sobre mí, mis proyectos recientes, educación, habilidades y experiencia laboral. También incluye un formulario de contacto para que puedas comunicarte conmigo fácilmente. 
 
+---
 
+## 💹 Implementación de Google Analytics
+He implementado Google Analytics como parte de mi portafolio para probar esta funcionalidad para rastrear el tráfico del sitio web y obtener información sobre los visitantes.
 
 ---
 
@@ -67,6 +70,8 @@ Usé [Sonner](https://sonner.dev/) porque:
 Usé [Firebase Hosting](https://firebase.google.com/docs/hosting) porque:
 - Proporciona un hosting rápido y seguro para aplicaciones web.
 - Permite desplegar aplicaciones con un solo comando.
+
+---
 
 ## 📂 Estructura del Proyecto
 
