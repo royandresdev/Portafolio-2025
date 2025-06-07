@@ -19,7 +19,7 @@ if (gtagId) {
   window.gtag("js", new Date());
   window.gtag("config", gtagId);
 } else {
-  console.error("Google Analytics ID no está definido.");
+  console.error("ID no está definido.");
 }
 
 createRoot(document.getElementById('root')).render(
