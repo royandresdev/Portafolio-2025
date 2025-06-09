@@ -76,6 +76,15 @@ export function useCarousel(
     const observer = new ResizeObserver(() => {
       const containerWidth = containerRef.current.clientWidth;
       let items = 1;
+      if (containerWidth === 0) return;
+
+      if (itemsToView === "auto" && containerWidth < minItemWidth) {
+        items = 1;
+        setAutoItemsToView(1);
+        setItemWidth(containerWidth);
+        return;
+      }
+
       if (itemsToView === "auto") {
         items = Math.max(1, Math.floor(containerWidth / minItemWidth));
         setAutoItemsToView(items);

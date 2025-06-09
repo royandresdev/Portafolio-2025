@@ -22,3 +22,7 @@
     transition: all 0.25s;
   }
 }
+
+@utility project-card {
+  @apply w-full;
+}
