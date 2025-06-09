@@ -22,15 +22,12 @@ const CarouselIndicator = ({ isActive }) => {
       aria-label="Indicador de carrusel"
     ></div>
   );
-};
-
-const defaultClassName = "w-full flex items-center mb-4";
+};;
 
 const Carousel = ({
   itemsToView,
   children,
   style,
-  className = defaultClassName,
 }) => {
   const {
     containerRef,
@@ -45,9 +42,9 @@ const Carousel = ({
   } = useCarousel(itemsToView, { scrollBehavior: "smooth", minItemWidth: 320 }, children.length);
   return (
     <div>
-      <div id="carousel" className={className}>
+      <div id="carousel" className="w-full flex items-center mb-4">
         <button
-          className={`btn-secondary px-2 size-10 ${canMoveLeft ? "" : "opacity-0 cursor-default"
+          className={`carousel__button-left ${canMoveLeft ? "" : "opacity-0 cursor-default"
             }`}
           onClick={handleMoveLeft}
           disabled={!canMoveLeft}
@@ -58,6 +55,7 @@ const Carousel = ({
             height={24}
             className="rotate-180"
           />
+          <span>Anterior</span>
         </button>
         <div
           className="carousel-container"
@@ -77,12 +75,13 @@ const Carousel = ({
           </div>
         </div>
         <button
-          className={`btn-secondary px-2 size-10 ${canMoveRight ? "" : "opacity-0 cursor-default"
+          className={`carousel__button-right ${canMoveRight ? "" : "opacity-0 cursor-default"
             }`}
           disabled={!canMoveRight}
           onClick={handleMoveRight}
           aria-label="Siguiente"
         >
+          <span>Siguiente</span>
           <Icon icon="material-symbols:arrow-right" height={24} />
         </button>
       </div>
