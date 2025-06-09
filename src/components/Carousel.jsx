@@ -55,6 +55,7 @@ const Carousel = ({
             height={24}
             className="rotate-180"
           />
+          <span>Anterior</span>
         </button>
         <div
           className="carousel-container"
@@ -80,6 +81,7 @@ const Carousel = ({
           onClick={handleMoveRight}
           aria-label="Siguiente"
         >
+          <span>Siguiente</span>
           <Icon icon="material-symbols:arrow-right" height={24} />
         </button>
       </div>

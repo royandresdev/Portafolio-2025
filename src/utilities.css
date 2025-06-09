@@ -1,0 +1,24 @@
+@utility btn-secondary {
+  @apply py-2 px-4 rounded bg-secondary-base text-primary-700 font-medium cursor-pointer;
+  transition: all 0.25s;
+
+  &:hover:not(:disabled) {
+    @apply bg-secondary-400 text-primary-100;
+    transition: all 0.25s;
+  }
+
+  &:disabled {
+    @apply bg-grey-600 text-primary-100 cursor-not-allowed;
+    transition: all 0.25s;
+  }
+}
+
+@utility btn-secondary-outline {
+  @apply text-secondary-base px-2 py-1 border border-secondary-base rounded font-medium bg-transparent;
+  transition: all 0.25s;
+
+  &:hover {
+    @apply bg-secondary-base text-primary-700 font-medium;
+    transition: all 0.25s;
+  }
+}

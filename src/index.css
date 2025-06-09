@@ -1,20 +1,11 @@
 @tailwind utilities;
+@import "./utilities.css";
 @import "tailwindcss";
 
 @layer base {
   html {
     scroll-behavior: smooth;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  span,
-  label {
-    color: var(--color-grey-100);
+    color: var(--color-primary-100);
   }
   h1 {
     font-size: 2.986rem;
@@ -93,28 +84,6 @@
     @apply container mx-auto h-fit;
   }
 
-  .btn-secondary-outline {
-    @apply text-secondary-base px-2 py-1 border border-secondary-base rounded font-medium;
-    transition: all 0.25s;
-  }
-  .btn-secondary-outline:hover {
-    @apply bg-secondary-base text-primary-700 font-medium;
-    transition: all 0.25s;
-  }
-
-  .btn-secondary {
-    @apply py-2 px-4 rounded bg-secondary-base text-primary-700 font-medium cursor-pointer;
-    transition: all 0.25s;
-  }
-  .btn-secondary:hover:not(:disabled) {
-    @apply bg-secondary-400 text-primary-100;
-    transition: all 0.25s;
-  }
-  .btn-secondary:disabled {
-    @apply bg-grey-600 text-primary-100 cursor-not-allowed;
-    transition: all 0.25s;
-  }
-
   .carousel-container {
     @apply w-full flex overflow-x-scroll;
     -ms-overflow-style: none;
@@ -124,10 +93,17 @@
 
   .carousel__button-left,
   .carousel__button-right {
-    @apply py-2 rounded bg-secondary-base text-primary-700 font-medium cursor-pointer px-2 size-10;
+    @apply btn-secondary px-2 size-10 flex items-center;
+
+    span {
+      @apply hidden;
+    }
 
     @media (width <= 400px) {
-      @apply flex-1;
+      @apply flex-1 btn-secondary-outline;
+      span {
+        @apply inline;
+      }
     }
   }
 
@@ -139,6 +115,10 @@
   .carousel__button-right {
     @media (width <= 400px) {
       @apply order-3 mt-4;
+
+      span {
+        @apply ml-auto;
+      }
     }
   }
 
