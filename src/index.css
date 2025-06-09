@@ -121,6 +121,27 @@
     scrollbar-width: none;
     scroll-snap-type: x mandatory;
   }
+
+  .carousel__button-left,
+  .carousel__button-right {
+    @apply py-2 rounded bg-secondary-base text-primary-700 font-medium cursor-pointer px-2 size-10;
+
+    @media (width <= 400px) {
+      @apply flex-1;
+    }
+  }
+
+  .carousel__button-left {
+    @media (width <= 400px) {
+      @apply order-2 mt-4;
+    }
+  }
+  .carousel__button-right {
+    @media (width <= 400px) {
+      @apply order-3 mt-4;
+    }
+  }
+
   .carousel-container::-webkit-scrollbar {
     display: none;
   }
@@ -226,4 +247,10 @@ select:-webkit-autofill {
   box-shadow: 0 0 0 1000px var(--color-primary-600) inset !important;
   -webkit-text-fill-color: var(--color-primary-100) !important;
   color: var(--color-primary-100) !important;
+}
+
+#carousel {
+  @media (width <= 400px) {
+    flex-wrap: wrap;
+  }
 }
