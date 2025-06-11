@@ -1,3 +1,11 @@
+@utility btn-primary {
+  @apply flex items-center gap-2 bg-primary-100 w-fit text-primary-700 py-1 px-2 rounded font-medium;
+
+  &:hover {
+    @apply bg-secondary-base text-primary-700;
+  }
+}
+
 @utility btn-secondary {
   @apply py-2 px-4 rounded bg-secondary-base text-primary-700 font-medium cursor-pointer;
   transition: all 0.25s;

@@ -28,6 +28,9 @@ const About = () => {
             de esta área. Estoy comprometido con sacar adelante mis proyectos y
             que estos sean reconocidos.
           </p>
+          <a className="btn-primary mb-4" href="/ROY HUAMAN AVILA.pdf" target="_blank" rel="noopener noreferrer">
+            <Icon className="text-2xl" icon="basil:document-solid" /> Revisar CV
+          </a>
           <div className="flex gap-3">
             <a
               href="https://github.com/royandresdev"
