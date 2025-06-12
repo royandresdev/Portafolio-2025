@@ -42,7 +42,7 @@ const Carousel = ({
   } = useCarousel(itemsToView, { scrollBehavior: "smooth", minItemWidth: 320 }, children.length);
   return (
     <div>
-      <div id="carousel" className="w-full flex items-center mb-4">
+      <div id="carousel" className="w-full flex items-center mb-4 gap-4">
         <button
           className={`carousel__button-left ${canMoveLeft ? "" : "opacity-0 cursor-default"
             }`}
