@@ -5,7 +5,12 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
     color: var(--color-primary-100);
+
+    @media (width < 768px) {
+      scroll-padding-top: 5rem;
+    }
   }
   h1 {
     font-size: 2.986rem;
