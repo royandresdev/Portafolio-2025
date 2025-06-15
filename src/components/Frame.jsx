@@ -1,6 +1,6 @@
 const Frame = ({ children, styleContent, styleFrame }) => {
   return (
-    <section
+    <article
       className={`frame ${styleFrame}`}
     >
       <div className="frame-header">
@@ -9,7 +9,7 @@ const Frame = ({ children, styleContent, styleFrame }) => {
         <div className="frame-header-circle"></div>
       </div>
       <div className={`frame-content ${styleContent}`}>{children}</div>
-    </section>
+    </article>
   );
 };
 export default Frame;
