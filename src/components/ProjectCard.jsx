@@ -19,7 +19,7 @@ const ProjectCard = ({ project }) => {
       <div>
         <img className="w-full aspect-video object-cover" src={image} alt="Project Image" />
       </div>
-      <h4 className="">{name}</h4>
+      <h3>{name}</h3>
       <div className="flex gap-2 flex-wrap">
         {technologies.map((tech, index) => (
           <span

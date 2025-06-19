@@ -51,12 +51,6 @@ const NavbarDesktop = ({ currentSection }) => {
         <a href="#contact" className="md:block hidden">
           Contacto
         </a>
-        <button>
-          <Icon
-            icon="mi:menu"
-            className="size-10 text-secondary-base md:hidden"
-          />
-        </button>
       </div>
     </nav>
   )
@@ -104,7 +98,7 @@ const NavBarMobile = ({ currentSection }) => {
         >
           <img src={Logo} alt="Logo RoyAndresDev" />
         </a>
-        <button onClick={handleMenuOpen}>
+        <button onClick={handleMenuOpen} title="Toggle sidebar">
           <Icon
             icon="mi:menu"
             className="size-10 text-secondary-base md:hidden"
@@ -120,7 +114,7 @@ const SideMenu = ({ sideMenuRef, isMenuOpen, handleMenuClose }) => {
   return (
     <div className={`fixed top-0 left-0 w-full h-full bg-primary-400 z-50 side-menu ${isMenuOpen ? "isOpen" : ""}`}>
       <div className="flex justify-end p-4 absolute top-0 right-0">
-        <button onClick={handleMenuClose}>
+        <button onClick={handleMenuClose} title="Close sidebar">
           <Icon icon="mi:close" className="size-10 text-secondary-base" />
         </button>
       </div>
