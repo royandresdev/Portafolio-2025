@@ -15,7 +15,7 @@ const Skills = () => {
             <div className="mb-8 flex gap-4 items-center">
               <img src={universityGrade} alt="University Grade Icon" />
               <div>
-                <h6 className="font-bold">Instituto San Ignacio de Loyola</h6>
+                <h3 className="font-bold">Instituto San Ignacio de Loyola</h3>
                 <p>Ingeniería de Software</p>
                 <p>2021 - actualmente</p>
               </div>
@@ -23,7 +23,7 @@ const Skills = () => {
             <div className="mb-8 flex gap-4 items-center">
               <img src={certificate} alt="Certificate Icon" />
               <div>
-                <h6 className="font-bold">Cibertec</h6>
+                <h3 className="font-bold">Cibertec</h3>
                 <p>Java</p>
                 <p>2020 - 2021</p>
               </div>
