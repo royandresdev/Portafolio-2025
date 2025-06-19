@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import AvatarSrc from "../assets/Avatar.jpg";
+import AvatarSrc from "../assets/Avatar.webp";
 import { Frame } from "../components";
 
 const About = () => {
