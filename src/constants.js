@@ -2,7 +2,7 @@ export const projects = [
   {
     id: 0,
     image:
-      "https://res.cloudinary.com/dcvwghrfp/image/upload/v1748978894/Portafolio.png",
+      "https://res.cloudinary.com/dcvwghrfp/image/upload/c_scale,w_450/v1748978894/Portafolio.webp",
     name: "Portafolio",
     technologies: ["React", "TailwindCSS", "Javascript"],
     description:
@@ -15,7 +15,7 @@ export const projects = [
   {
     id: 1,
     image:
-      "https://res.cloudinary.com/dcvwghrfp/image/upload/v1730772582/edutrack_banner.png",
+      "https://res.cloudinary.com/dcvwghrfp/image/upload/c_scale,w_450/v1730772582/edutrack_banner.webp",
     name: "Edutrack",
     technologies: ["React", "TailwindCSS", "Javascript"],
     description:
@@ -27,7 +27,7 @@ export const projects = [
   {
     id: 2,
     image:
-      "https://res.cloudinary.com/dcvwghrfp/image/upload/v1746997874/PatitasFrame_iythtb.png",
+      "https://res.cloudinary.com/dcvwghrfp/image/upload/v1746997874/Patitas.webp",
     name: "Patitas",
     technologies: ["React", "TailwindCSS", "Javascript"],
     description:
@@ -39,7 +39,7 @@ export const projects = [
   {
     id: 3,
     image:
-      "https://res.cloudinary.com/dcvwghrfp/image/upload/v1746998250/PokemonWebFrame_rcf6kq.png",
+      "https://res.cloudinary.com/dcvwghrfp/image/upload/v1746998250/PokemonWeb.webp",
     name: "PokeWeb",
     technologies: ["React", "Bootstrap", "Typescript"],
     description:
@@ -52,7 +52,7 @@ export const projects = [
   {
     id: 4,
     image:
-      "https://res.cloudinary.com/dcvwghrfp/image/upload/v1748978663/clickgram-thumbnail.jpg",
+      "https://res.cloudinary.com/dcvwghrfp/image/upload/c_scale,w_450/v1748978663/clickgram.webp",
     name: "Clickgram",
     technologies: ["React", "Bootstrap", "Typescript"],
     description:
