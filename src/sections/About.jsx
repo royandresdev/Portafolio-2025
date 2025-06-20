@@ -8,7 +8,7 @@ const About = () => {
       className="section-container min-h-dvh pt-20 md:pt-[56px] bg-primary-700"
     >
       <div className="section-content flex flex-col md:flex-row gap-6 justify-center">
-        <Frame styleFrame="order-2 md:order-1 mx-4 w-full md:max-w-[500px]">
+        <Frame styleFrame="order-2 md:order-1 w-full max-w-[400px] mx-auto md:max-w-[500px] md:mx-4">
           <div className="w-full aspect-square overflow-hidden">
             <picture>
               <source
@@ -19,7 +19,7 @@ const About = () => {
             </picture>
           </div>
         </Frame>
-        <div className="md:flex-1/2 max-w-[500px] md:order-2">
+        <div className="md:flex-1/2 w-full md:max-w-[500px] md:order-2">
           <span className="section-title text-sm md:text-base">
             - MI NOMBRE ES
           </span>
