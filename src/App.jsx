@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import { NavBar } from './components'
+import { BannerCookies, NavBar } from './components'
 import { About, Contact, Experience, Projects, Skills } from './sections'
 import { Toaster } from 'sonner';
 
 const gtagId = import.meta.env.VITE_GTAG_ID;
-
 
 function App() {
   const [currentSection, setCurrentSection] = useState(null);
@@ -61,6 +60,7 @@ function App() {
       <Experience />
       <Skills />
       <Contact />
+      <BannerCookies />
     </main>
   )
 }
