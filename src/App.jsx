@@ -9,7 +9,6 @@ const gtagId = import.meta.env.VITE_GTAG_ID;
 
 function App() {
   const [currentSection, setCurrentSection] = useState(null);
-  const [consented, setConsented] = useState(localStorage.getItem("cookieConsent"));
 
   useEffect(() => {
     const sections = document.querySelectorAll(".section-container");
@@ -35,26 +34,24 @@ function App() {
   }, [])
 
   useEffect(() => {
-    if (consented === "true") {
-      if (gtagId) {
-        const script = document.createElement("script");
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${gtagId}`;
-        script.async = true;
-        document.head.appendChild(script);
+    if (gtagId) {
+      const script = document.createElement("script");
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${gtagId}`;
+      script.async = true;
+      document.head.appendChild(script);
 
-        window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || [];
 
-        window.gtag = function () {
-          window.dataLayer.push(arguments);
-        };
+      window.gtag = function () {
+        window.dataLayer.push(arguments);
+      };
 
-        window.gtag("js", new Date());
-        window.gtag("config", gtagId);
-      } else {
-        console.error("ID no está definido.");
-      }
+      window.gtag("js", new Date());
+      window.gtag("config", gtagId);
+    } else {
+      console.error("ID no está definido.");
     }
-  }, [consented])
+  }, [])
   return (
     <main className='relative overflow-hidden bg-primary-700'>
       <Toaster />

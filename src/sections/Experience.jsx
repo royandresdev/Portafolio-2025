@@ -10,14 +10,14 @@ const Experience = () => {
         </div>
         <div className="flex flex-col lg:flex-row w-full gap-12 items-center flex-1 pb-12">
           <div className="w-full h-auto md:min-w-[650px] order-2 md:order-1">
-            <iframe
+            {/* <iframe
               className="w-full aspect-video"
               src="https://www.youtube-nocookie.com/embed/-SJfrF_vJ3A?si=TTO7f-YBR8tPcwUh"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
-            ></iframe>
+            ></iframe> */}
           </div>
           <div className="order-1 md:order-2">
             <div className="flex items-center gap-4 mb-2">
