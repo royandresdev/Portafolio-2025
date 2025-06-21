@@ -15,7 +15,7 @@ const About = () => {
                 media="(min-width:650px)"
                 srcSet="https://res.cloudinary.com/dcvwghrfp/image/upload/f_webp,q_auto,w_1000/Avatar.webp"
               />
-              <img src="https://res.cloudinary.com/dcvwghrfp/image/upload/f_webp,q_auto,w_400/Avatar.webp" alt="Imagen de Roy Huaman" />
+              <img src="https://res.cloudinary.com/dcvwghrfp/image/upload/f_webp,q_auto,w_570/Avatar.webp" alt="Imagen de Roy Huaman" />
             </picture>
           </div>
         </Frame>
