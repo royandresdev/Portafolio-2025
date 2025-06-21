@@ -3,7 +3,6 @@ import './App.css'
 import { BannerCookies, NavBar } from './components'
 import { About, Contact, Experience, Projects, Skills } from './sections'
 import { Toaster } from 'sonner';
-import { ApplicationProvider } from './state/Application/ApplicationProvider';
 import useApplication from './hooks/useApplication';
 
 const gtagId = import.meta.env.VITE_GTAG_ID;
@@ -36,7 +35,9 @@ function App() {
   }, [])
 
   useEffect(() => {
-    if (gtagId && isAcceptedCookies) {
+    if (!isAcceptedCookies) return;
+
+    if (gtagId) {
       const script = document.createElement("script");
       script.src = `https://www.googletagmanager.com/gtag/js?id=${gtagId}`;
       script.async = true;
@@ -56,18 +57,16 @@ function App() {
   }, [isAcceptedCookies])
 
   return (
-    <ApplicationProvider>
-      <main className='relative overflow-hidden bg-primary-700'>
-        <Toaster />
-        <NavBar currentSection={currentSection} />
-        <About />
-        <Projects />
-        <Experience />
-        <Skills />
-        <Contact />
-        <BannerCookies />
-      </main>
-    </ApplicationProvider>
+    <main className='relative overflow-hidden bg-primary-700'>
+      <Toaster />
+      <NavBar currentSection={currentSection} />
+      <About />
+      <Projects />
+      <Experience />
+      <Skills />
+      <Contact />
+      <BannerCookies />
+    </main>
   )
 }
 
