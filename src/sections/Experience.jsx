@@ -13,7 +13,7 @@ const Experience = () => {
         <div className="flex flex-col lg:flex-row w-full gap-12 items-center flex-1 pb-12">
           <div className="w-full h-auto md:min-w-[650px] order-2 md:order-1">
             {
-              isAcceptedCookies && (
+              isAcceptedCookies ? (
                 <iframe
                   className="w-full aspect-video"
                   src="https://www.youtube-nocookie.com/embed/-SJfrF_vJ3A?si=TTO7f-YBR8tPcwUh"
@@ -22,6 +22,10 @@ const Experience = () => {
                   referrerPolicy="strict-origin-when-cross-origin"
                   allowFullScreen
                 ></iframe>
+              ) : (
+                <a href="https://www.youtube.com/watch?v=-SJfrF_vJ3A" target="_blank" rel="noopener noreferrer" title="Watch the TuVideo project demonstration on YouTube">
+                  <img src="https://res.cloudinary.com/dcvwghrfp/image/upload/v1750507576/TuVideo-YoutubePlaceholder.webp" alt="Placeholder image for TuVideo project demonstration video" />
+                </a>
               )
             }
           </div>
