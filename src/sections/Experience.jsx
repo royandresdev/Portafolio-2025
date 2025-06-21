@@ -23,8 +23,8 @@ const Experience = () => {
                   allowFullScreen
                 ></iframe>
               ) : (
-                <a href="https://www.youtube.com/watch?v=-SJfrF_vJ3A" target="_blank" rel="noopener noreferrer" title="TuVideo Project Video">
-                  <img src="https://res.cloudinary.com/dcvwghrfp/image/upload/v1750507576/TuVideo-YoutubePlaceholder.webp" alt="TuVideo Project Image" />
+                <a href="https://www.youtube.com/watch?v=-SJfrF_vJ3A" target="_blank" rel="noopener noreferrer" title="Watch the TuVideo project demonstration on YouTube">
+                  <img src="https://res.cloudinary.com/dcvwghrfp/image/upload/v1750507576/TuVideo-YoutubePlaceholder.webp" alt="Placeholder image for TuVideo project demonstration video" />
                 </a>
               )
             }
