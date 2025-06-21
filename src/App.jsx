@@ -4,11 +4,13 @@ import { BannerCookies, NavBar } from './components'
 import { About, Contact, Experience, Projects, Skills } from './sections'
 import { Toaster } from 'sonner';
 import { ApplicationProvider } from './state/Application/ApplicationProvider';
+import useApplication from './hooks/useApplication';
 
 const gtagId = import.meta.env.VITE_GTAG_ID;
 
 function App() {
   const [currentSection, setCurrentSection] = useState(null);
+  const { isAcceptedCookies } = useApplication();
 
   useEffect(() => {
     const sections = document.querySelectorAll(".section-container");
@@ -34,7 +36,7 @@ function App() {
   }, [])
 
   useEffect(() => {
-    if (gtagId) {
+    if (gtagId && isAcceptedCookies) {
       const script = document.createElement("script");
       script.src = `https://www.googletagmanager.com/gtag/js?id=${gtagId}`;
       script.async = true;
@@ -51,7 +53,7 @@ function App() {
     } else {
       console.error("ID no está definido.");
     }
-  }, [])
+  }, [isAcceptedCookies])
 
   return (
     <ApplicationProvider>
