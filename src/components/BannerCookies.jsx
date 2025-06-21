@@ -1,21 +1,18 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useState } from "react";
+import useApplication from "../hooks/useApplication";
 
 function BannerCookies() {
-  const [consented, setConsented] = useState(
-    localStorage.getItem("cookiesAccepted")
-  );
-  const [isOpen, setIsOpen] = useState(consented === null || consented === "false");
+  const { isAcceptedCookies, handleAcceptedCookies } = useApplication();
+  const [isOpen, setIsOpen] = useState(isAcceptedCookies === null || isAcceptedCookies === "false");
 
   const handleAcceptCookies = () => {
-    localStorage.setItem("cookiesAccepted", "true");
-    setConsented(true);
+    handleAcceptedCookies(true);
     setIsOpen(false);
   };
 
   const handleRejectCookies = () => {
-    localStorage.setItem("cookiesAccepted", "false");
-    setConsented(false);
+    handleAcceptedCookies(false);
     setIsOpen(false);
   }
 

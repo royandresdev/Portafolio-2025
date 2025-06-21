@@ -3,6 +3,7 @@ import './App.css'
 import { BannerCookies, NavBar } from './components'
 import { About, Contact, Experience, Projects, Skills } from './sections'
 import { Toaster } from 'sonner';
+import { ApplicationProvider } from './state/Application/ApplicationProvider';
 
 const gtagId = import.meta.env.VITE_GTAG_ID;
 
@@ -51,17 +52,20 @@ function App() {
       console.error("ID no está definido.");
     }
   }, [])
+
   return (
-    <main className='relative overflow-hidden bg-primary-700'>
-      <Toaster />
-      <NavBar currentSection={currentSection} />
-      <About />
-      <Projects />
-      <Experience />
-      <Skills />
-      <Contact />
-      <BannerCookies />
-    </main>
+    <ApplicationProvider>
+      <main className='relative overflow-hidden bg-primary-700'>
+        <Toaster />
+        <NavBar currentSection={currentSection} />
+        <About />
+        <Projects />
+        <Experience />
+        <Skills />
+        <Contact />
+        <BannerCookies />
+      </main>
+    </ApplicationProvider>
   )
 }
 
