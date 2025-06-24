@@ -32,7 +32,7 @@ const NavbarDesktop = ({ currentSection }) => {
         className="container mx-auto py-4 flex gap-3 md:justify-center justify-between relative px-4"
       >
         <img
-          className="md:absolute left-0 top-1/2 md:transform md:-translate-y-1/2"
+          className="md:absolute left-4 top-1/2 md:transform md:-translate-y-1/2"
           src={Logo}
           alt="Logo RoyAndresDev"
         />

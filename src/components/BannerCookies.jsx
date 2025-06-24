@@ -18,7 +18,7 @@ function BannerCookies() {
 
   return (
     <div
-      className={`fixed bottom-0 left-0 right-0 z-10 ${isOpen ? "fixed" : "hidden"}
+      className={`fixed bottom-0 left-0 right-0 mx-4 z-10 ${isOpen ? "fixed" : "hidden"}
         }`}
     >
       <div className="container flex flex-wrap gap-3 items-center bg-primary-400 text-primary-100 mx-auto mb-4 p-4 rounded-[20px]">
