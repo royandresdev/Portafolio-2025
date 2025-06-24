@@ -90,7 +90,7 @@ const NavBarMobile = ({ currentSection }) => {
     >
       <div
         ref={sideMenuRef}
-        className="container mx-auto py-4 flex gap-3 md:justify-center justify-between relative px-4"
+        className="container mx-auto py-4 flex gap-3 justify-between relative px-4"
       >
         <a
           className="flex items-center justify-center"
@@ -101,7 +101,7 @@ const NavBarMobile = ({ currentSection }) => {
         <button onClick={handleMenuOpen} title="Toggle sidebar">
           <Icon
             icon="mi:menu"
-            className="size-10 text-secondary-base md:hidden"
+            className="size-10 text-secondary-base"
           />
         </button>
       </div>
