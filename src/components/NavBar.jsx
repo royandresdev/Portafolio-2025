@@ -131,7 +131,7 @@ const SideMenu = ({ sideMenuRef, isMenuOpen, handleMenuClose }) => {
               key={link.href}
               onClick={handleMenuClose}
               href={link.href}
-              className="text-2xl"
+              className="text-2xl flex items-center gap-2"
             >
               {link.label}
             </a>
