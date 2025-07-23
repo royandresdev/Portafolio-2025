@@ -3,6 +3,15 @@ import Logo from "../assets/Logo.svg";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import useResponsive from "../hooks/useResponsive";
 
+const links = [
+  { href: "#about", label: "Acerca de mi" },
+  { href: "#projects", label: "Proyectos" },
+  { href: "#experience", label: "Experiencia" },
+  { href: "#skills", label: "Habilidades" },
+  { href: "#contact", label: "Contacto" },
+  { href: "https://dev.to/royandresdev_", label: <>Blog <Icon icon="mdi:open-in-new" /></>, target: "_blank" },
+];
+
 const NavbarDesktop = ({ currentSection }) => {
   const navbarDesktopRef = useRef();
 
@@ -36,21 +45,18 @@ const NavbarDesktop = ({ currentSection }) => {
           src={Logo}
           alt="Logo RoyAndresDev"
         />
-        <a href="#about" className="md:block hidden">
-          Acerca de mi
-        </a>
-        <a href="#projects" className="md:block hidden">
-          Proyectos
-        </a>
-        <a href="#experience" className="md:block hidden">
-          Experiencia
-        </a>
-        <a href="#skills" className="md:block hidden">
-          Habilidades
-        </a>
-        <a href="#contact" className="md:block hidden">
-          Contacto
-        </a>
+        {
+          links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              target={link.target}
+              className="flex items-center gap-2"
+            >
+              {link.label}
+            </a>
+          ))
+        }
       </div>
     </nav>
   )
@@ -119,21 +125,18 @@ const SideMenu = ({ sideMenuRef, isMenuOpen, handleMenuClose }) => {
         </button>
       </div>
       <div ref={sideMenuRef} className="flex flex-col items-center justify-center h-full gap-4">
-        <a onClick={handleMenuClose} href="#about" className="text-2xl">
-          Acerca de mi
-        </a>
-        <a onClick={handleMenuClose} href="#projects" className="text-2xl">
-          Proyectos
-        </a>
-        <a onClick={handleMenuClose} href="#experience" className="text-2xl">
-          Experiencia
-        </a>
-        <a onClick={handleMenuClose} href="#skills" className="text-2xl">
-          Habilidades
-        </a>
-        <a onClick={handleMenuClose} href="#contact" className="text-2xl">
-          Contacto
-        </a>
+        {
+          links.map((link) => (
+            <a
+              key={link.href}
+              onClick={handleMenuClose}
+              href={link.href}
+              className="text-2xl"
+            >
+              {link.label}
+            </a>
+          ))
+        }
       </div>
     </div>
   )
