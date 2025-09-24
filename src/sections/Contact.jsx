@@ -11,8 +11,10 @@ const Contact = () => {
           que has visto. Aquí puedes encontrar mis datos de contacto.
         </p>
         <div className="flex items-start w-full gap-12 flex-col md:flex-row">
-          <ContactForm />
-          <div className="space-y-8">
+          <div className="flex-1 w-full">
+            <ContactForm />
+          </div>
+          <div className="space-y-8 flex-1 w-full">
             <div className="flex gap-4 items-center">
               <Icon
                 height={24}
