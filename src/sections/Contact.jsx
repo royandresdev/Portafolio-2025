@@ -41,11 +41,11 @@ const Contact = () => {
               <div>
                 <p>Celular</p>
                 <a
-                  href="https://wa.link/jy4ctb"
+                  href="https://wa.link/a6qv0a"
                   target="_blank"
                   className="text-secondary-base hover:text-secondary-200 transition-colors duration-300"
                 >
-                  963 860 273
+                  993 927 044
                 </a>
               </div>
             </div>
