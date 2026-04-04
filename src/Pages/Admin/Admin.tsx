@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import useProjects from "../../hooks/useProjects";
 import ProjectEditPanel from "./components/ProjectEditPanel";
-import { Project } from "services/project.types";
+import { Project } from "../../services/project.types";
 
 function Admin() {
   const { projects, updateProject, deleteProject } = useProjects();
