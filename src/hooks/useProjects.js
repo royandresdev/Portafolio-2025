@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
-import { getProjects } from "../services/projects.service";
+import {
+  getProjects,
+  updateProject as updateProjectService,
+} from "../services/projects.service";
 
 const useProjects = () => {
   const [projects, setProjects] = useState([]);
@@ -13,11 +16,21 @@ const useProjects = () => {
         setProjects([]);
       }
     };
-
     fetchProjects();
   }, []);
 
-  return { projects };
+  // Actualiza un proyecto y sincroniza el estado local
+  const updateProject = async (id, updates) => {
+    const updated = await updateProjectService(id, updates);
+    setProjects((prev) =>
+      prev.map((project) =>
+        project.id === id ? { ...project, ...updated } : project,
+      ),
+    );
+    return updated;
+  };
+
+  return { projects, updateProject };
 };
 
 export default useProjects;
