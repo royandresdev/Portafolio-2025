@@ -30,3 +30,16 @@ export const updateProject = async (id: number, updates: Partial<Project>) => {
   }
   return data;
 };
+
+/**
+ * Elimina un proyecto por id
+ * @param {string|number} id - ID del proyecto a eliminar
+ * @returns {Promise<void>} Lanza error si falla
+ */
+export const deleteProject = async (id: number) => {
+  const { error } = await supabase.from("Projects").delete().eq("id", id);
+  if (error) {
+    console.error("Error deleting project:", error);
+    throw error;
+  }
+};

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import {
   getProjects,
   updateProject as updateProjectService,
+  deleteProject as deleteProjectService,
 } from "../services/projects.service";
 import { Project } from "services/project.types";
 
@@ -31,7 +32,13 @@ const useProjects = () => {
     return updated;
   };
 
-  return { projects, updateProject };
+  // Elimina un proyecto y sincroniza el estado local
+  const deleteProject = async (id: number) => {
+    await deleteProjectService(id);
+    setProjects((prev) => prev.filter((project) => project.id !== id));
+  };
+
+  return { projects, updateProject, deleteProject };
 };
 
 export default useProjects;
