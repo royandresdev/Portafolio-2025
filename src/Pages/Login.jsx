@@ -1,15 +1,31 @@
 
 import { useState } from "react";
+import { supabase } from "../shared/lib/supabase";
+import useApplication from "../hooks/useApplication";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const { handleLogin } = useApplication();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-    // Aquí se integrará la lógica de Supabase
+    setLoading(true);
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
+    if (error) {
+      setError(error.message);
+    } else if (data && data.user) {
+      setError("");
+      handleLogin(data.user);
+      // Aquí puedes redirigir o mostrar mensaje de éxito
+    }
+    setLoading(false);
   };
 
   return (
@@ -48,9 +64,10 @@ function Login() {
         )}
         <button
           type="submit"
-          className="bg-secondary-base text-primary-400 font-semibold py-2 rounded hover:bg-secondary-200 transition-colors"
+          className="bg-secondary-base text-primary-400 font-semibold py-2 rounded hover:bg-secondary-200 transition-colors disabled:opacity-60"
+          disabled={loading}
         >
-          Iniciar sesión
+          {loading ? "Ingresando..." : "Iniciar sesión"}
         </button>
       </form>
     </div>
