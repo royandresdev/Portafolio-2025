@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router";
 import Home from "../Pages/Home";
 import { RouterProvider } from "react-router/dom";
 import Login from "../Pages/Login";
+import Admin from "../Pages/Admin";
+import ProtectedRoute from "./ProtectedRoute";
 
 const router = createBrowserRouter([
   {
@@ -9,8 +11,17 @@ const router = createBrowserRouter([
     element: <Home />
   },
   {
-    path: "admin/login",
+    path: "/login",
     element: <Login />
+  },
+  {
+    element: <ProtectedRoute />, // loader de protección
+    children: [
+      {
+        path: "/admin",
+        element: <Admin />
+      }
+    ]
   }
 ]);
 
