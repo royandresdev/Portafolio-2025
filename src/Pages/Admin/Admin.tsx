@@ -1,4 +1,15 @@
 import { useState } from "react";
+import {
+  AlertDialog,
+  AlertDialogTrigger,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogCancel,
+  AlertDialogAction,
+} from "@/components/ui/alert-dialog";
 import useProjects from "../../hooks/useProjects";
 import ProjectEditPanel from "./components/ProjectEditPanel";
 import { Project } from "services/project.types";
@@ -18,12 +29,19 @@ function Admin() {
     setEditingProject(project);
   };
 
-  const handleDeleteProject = async (id: number) => {
+  const [deleteId, setDeleteId] = useState<number | null>(null);
+  const [deleting, setDeleting] = useState(false);
+
+  const handleDeleteProject = async () => {
+    if (deleteId == null) return;
+    setDeleting(true);
     try {
-      await deleteProject(id);
+      await deleteProject(deleteId);
+      setDeleteId(null);
     } catch (error) {
       console.error("Error al eliminar proyecto:", error);
-      // Aquí podrías mostrar un mensaje al usuario si lo deseas
+    } finally {
+      setDeleting(false);
     }
   };
 
@@ -76,12 +94,38 @@ function Admin() {
                   >
                     Editar
                   </button>
-                  <button
-                    onClick={() => handleDeleteProject(project.id)}
-                    className="bg-error text-primary-100 px-3 py-1 rounded hover:bg-error/80 transition-colors"
-                  >
-                    Eliminar
-                  </button>
+                  <AlertDialog>
+                    <AlertDialogTrigger asChild>
+                      <button
+                        className="bg-error text-primary-100 px-3 py-1 rounded hover:bg-error/80 transition-colors"
+                        onClick={() => setDeleteId(project.id)}
+                      >
+                        Eliminar
+                      </button>
+                    </AlertDialogTrigger>
+                    <AlertDialogContent>
+                      <AlertDialogHeader>
+                        <AlertDialogTitle>¿Eliminar proyecto?</AlertDialogTitle>
+                        <AlertDialogDescription>
+                          Esta acción no se puede deshacer. ¿Seguro que deseas eliminar este proyecto?
+                        </AlertDialogDescription>
+                      </AlertDialogHeader>
+                      <AlertDialogFooter>
+                        <AlertDialogCancel onClick={() => setDeleteId(null)}>
+                          Cancelar
+                        </AlertDialogCancel>
+                        <AlertDialogAction asChild>
+                          <button
+                            onClick={handleDeleteProject}
+                            disabled={deleting}
+                            className="bg-error text-primary-100 px-3 py-1 rounded hover:bg-error/80 transition-colors"
+                          >
+                            {deleting ? "Eliminando..." : "Eliminar"}
+                          </button>
+                        </AlertDialogAction>
+                      </AlertDialogFooter>
+                    </AlertDialogContent>
+                  </AlertDialog>
                 </div>
               </li>
             ))}
