@@ -23,17 +23,17 @@ const About = () => {
           <span className="section-title text-sm md:text-base">
             - MI NOMBRE ES
           </span>
-          <h1 className="md:leading-14 mb-6 text-3xl md:text-5xl">
+          <h1 className="md:leading-14 mb-6 text-3xl md:text-5xl text-gray-100">
             <span className="text-secondary-base block">Roy Huaman</span>
             Frontend Developer
           </h1>
-          <p className="mb-6 text-sm md:text-base">
+          <p className="mb-6 text-sm md:text-base text-gray-100">
             ¡Bienvenido! Soy un entusiasta de la programación. Desde siempre me
             ha fascinado entender cómo funciona el software. Al codificar,
             siento que tengo la libertad de explotar al máximo mi creatividad,
             creando código sólido y profesional.
           </p>
-          <p className="mb-6 text-sm md:text-base">
+          <p className="mb-6 text-sm md:text-base text-gray-100">
             Me encanta mostrar los resultados a los usuarios, lo que me apasiona
             de esta área. Estoy comprometido con sacar adelante mis proyectos y
             que estos sean reconocidos.
