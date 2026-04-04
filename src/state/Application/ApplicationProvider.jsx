@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ApplicationContext } from "./ApplicationContext";
 
-export function ApplicationProvider({ children }) {
+export default function ApplicationProvider({ children }) {
   const [isAcceptedCookies, setIsAcceptedCookies] = useState(localStorage.getItem("acceptedCookies"));
 
   const handleAcceptedCookies = (accepted) => {
