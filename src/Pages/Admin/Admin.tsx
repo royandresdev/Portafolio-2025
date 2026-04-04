@@ -4,7 +4,7 @@ import ProjectEditPanel from "./components/ProjectEditPanel";
 import { Project } from "services/project.types";
 
 function Admin() {
-  const { projects, updateProject } = useProjects();
+  const { projects, updateProject, deleteProject } = useProjects();
   const [editingProject, setEditingProject] = useState<Project | null>(null);
   const [saving, setSaving] = useState(false);
 
@@ -18,8 +18,13 @@ function Admin() {
     setEditingProject(project);
   };
 
-  const handleDeleteProject = (id: number) => {
-    // Lógica para eliminar proyecto
+  const handleDeleteProject = async (id: number) => {
+    try {
+      await deleteProject(id);
+    } catch (error) {
+      console.error("Error al eliminar proyecto:", error);
+      // Aquí podrías mostrar un mensaje al usuario si lo deseas
+    }
   };
 
   const handleCancelEdit = () => {
