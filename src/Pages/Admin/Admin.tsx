@@ -111,7 +111,10 @@ function Admin() {
                         </AlertDialogDescription>
                       </AlertDialogHeader>
                       <AlertDialogFooter>
-                        <AlertDialogCancel onClick={() => setDeleteId(null)}>
+                        <AlertDialogCancel
+                          onClick={() => setDeleteId(null)}
+                          className="bg-secondary-base text-primary-700 border border-secondary-base hover:bg-secondary-200 hover:text-primary-100 transition-colors px-3 py-1 rounded"
+                        >
                           Cancelar
                         </AlertDialogCancel>
                         <AlertDialogAction asChild>
