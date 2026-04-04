@@ -1,22 +1,24 @@
 import { useState } from "react";
 import useProjects from "../../hooks/useProjects";
-import ProjectEditPanel from "./ProjectEditPanel";
+import ProjectEditPanel from "./components/ProjectEditPanel";
+import { Project } from "services/project.types";
 
 function Admin() {
   const { projects, updateProject } = useProjects();
-  const [editingProject, setEditingProject] = useState(null);
+  const [editingProject, setEditingProject] = useState<Project | null>(null);
   const [saving, setSaving] = useState(false);
 
   const handleAddProject = () => {
     // Lógica para agregar proyecto
   };
 
-  const handleEditProject = (id) => {
+  const handleEditProject = (id: number) => {
     const project = projects.find((p) => p.id === id);
+    if (!project) return;
     setEditingProject(project);
   };
 
-  const handleDeleteProject = (id) => {
+  const handleDeleteProject = (id: number) => {
     // Lógica para eliminar proyecto
   };
 
@@ -24,11 +26,19 @@ function Admin() {
     setEditingProject(null);
   };
 
-  const handleSaveEdit = async (formData) => {
+  const handleSaveEdit = async (formData: Partial<Project>) => {
     setSaving(true);
-    await updateProject(editingProject.id, formData);
-    setSaving(false);
-    setEditingProject(null);
+    try {
+      if (!editingProject) return;
+      await updateProject(editingProject.id, formData);
+      setSaving(false);
+      setEditingProject(null);
+    } catch (error) {
+      console.error("Error al guardar proyecto:", error);
+      setSaving(false);
+    } finally {
+      setSaving(false);
+    }
   };
 
   return (

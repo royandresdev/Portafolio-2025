@@ -1,9 +1,17 @@
 import { useState } from "react";
+import { Project } from "services/project.types";
 
-export default function ProjectEditPanel({ project, onSave, onCancel, saving }) {
+interface ProjectEditPanelProps {
+  project: Project;
+  onSave: (formData: Partial<Project>) => void;
+  onCancel: () => void;
+  saving: boolean;
+}
+
+export default function ProjectEditPanel({ project, onSave, onCancel, saving }: ProjectEditPanelProps) {
   const [form, setForm] = useState({ ...project });
 
-  const handleFormChange = (e) => {
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
   };
