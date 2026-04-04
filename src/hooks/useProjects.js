@@ -6,8 +6,12 @@ const useProjects = () => {
 
   useEffect(() => {
     const fetchProjects = async () => {
-      const fetchProjects = await getProjects();
-      setProjects(fetchProjects);
+      try {
+        const projectsData = await getProjects();
+        setProjects(Array.isArray(projectsData) ? projectsData : []);
+      } catch (error) {
+        setProjects([]);
+      }
     };
 
     fetchProjects();
