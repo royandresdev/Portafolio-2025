@@ -1,4 +1,5 @@
 import { supabase } from "../shared/lib/supabase";
+import { Project } from "./project.types";
 
 export const getProjects = async () => {
   const { data, error } = await supabase.from("Projects").select();
@@ -16,7 +17,7 @@ export const getProjects = async () => {
  * @param {object} updates - Campos a actualizar
  * @returns {Promise<object>} Proyecto actualizado o error
  */
-export const updateProject = async (id, updates) => {
+export const updateProject = async (id: number, updates: Partial<Project>) => {
   const { data, error } = await supabase
     .from("Projects")
     .update(updates)
