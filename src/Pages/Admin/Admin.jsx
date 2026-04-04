@@ -1,4 +1,4 @@
-import useProjects from "../hooks/useProjects";
+import useProjects from "../../hooks/useProjects";
 
 function Admin() {
   const { projects } = useProjects();
